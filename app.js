@@ -34,12 +34,12 @@ const chatbox__buttonBtn = document.createElement("button");
 
 // "chatbox__button" image
 const chatbox__buttonImg = document.createElement("img");
-chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@latest/frontend/static/images/chatbox-icon.svg"
+chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot/frontend/static/images/chatbox-icon.svg"
 
 const cssSheet = document.createElement("link");
 cssSheet.rel = "stylesheet";
 cssSheet.type = "text/css";
-cssSheet.href = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@latest/frontend/static/css/main.css"
+cssSheet.href = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot/frontend/static/css/main.css"
 
 head.append(cssSheet);
 chatbox__buttonBtn.append(chatbox__buttonImg);
