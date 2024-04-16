@@ -21,7 +21,7 @@ chatbox__headerDiv.className = 'chatbox__header';
 const chatbox__header__imageDiv = document.createElement("div");
 chatbox__header__imageDiv.className = 'chatbox__image--header';
 const chatbox__header__imageImg = document.createElement("img");
-chatbox__header__imageImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@v1.0.0/frontend/static/images/moodle-logo.svg"
+chatbox__header__imageImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.0/frontend/static/images/moodle-logo.svg"
 chatbox__header__imageImg.alt = 'image';
 
 // "chatbox__content--header" div
@@ -49,7 +49,7 @@ const chatbox__footerBtn = document.createElement("button");
 chatbox__footerBtn.id = "send__button";
 chatbox__footerBtn.className = "chatbox__send--footer";
 const chatbox__footerImg = document.createElement("img");
-chatbox__footerImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@v1.0.0/frontend/static/images/send-button.svg";
+chatbox__footerImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.0/frontend/static/images/send-button.svg";
 
 // "chatbox__button" div
 const chatbox__buttonDiv = document.createElement("div");
@@ -60,7 +60,7 @@ const chatbox__buttonBtn = document.createElement("button");
 
 // "chatbox__button" image
 const chatbox__buttonImg = document.createElement("img");
-chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@v1.0.0/frontend/static/images/chatbox-icon.svg"
+chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.0/frontend/static/images/chatbox-icon.svg"
 
 const cssSheet = document.createElement("link");
 cssSheet.rel = "stylesheet";
