@@ -32,7 +32,7 @@ chatbox__content__headerH4.className = "chatbox__heading--header";
 chatbox__content__headerH4.innerText = "MOODLE chatbot'as";
 const chatbox__content__headerP = document.createElement("P");
 chatbox__content__headerP.className = "chatbox__description--header";
-chatbox__content__headerP.innerText = "abas. Gal galėčiau Tau kuo nors padėti?";
+chatbox__content__headerP.innerText = "Labas. Gal galėčiau Tau kuo nors padėti?";
 
 // "chatbox__messages" div
 const chatbox__messagesDiv = document.createElement("div");
