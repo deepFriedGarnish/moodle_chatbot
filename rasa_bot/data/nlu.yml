@@ -1,0 +1,109 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - labas
+    - labukas
+    - hello
+    - hi
+    - helo
+    - laba
+    - sveikas
+    - sveika
+    - gera diena
+    - laba diena
+
+- intent: goodbye
+  examples: |
+    - ate
+    - iki
+    - viso
+    - iki susitikimo
+    - viso gero
+    - bye
+    - bai bai
+    - cya
+
+- intent: affirm
+  examples: |
+    - taip
+    - tp
+    - žinoma
+    - taip tikrai
+    - gerai skamba
+    - o taip
+    - y
+    - (y)
+
+- intent: deny
+  examples: |
+    - ne
+    - nea
+    - niekada
+    - nemanau
+    - man nepatinka
+    - nė per kur
+    - manau ne
+
+- intent: mood_great
+  examples: |
+    - nuostabu
+    - nuostabus
+    - puiku
+    - puikus
+    - jauciuosi puikiai
+    - jauciuosi labai gerai
+    - man viskas gerai
+    - pas mane viskas gerai
+    - tobulai
+
+- intent: mood_unhappy
+  examples: |
+    - man nesiseka
+    - as liudnas
+    - nesijauciu gerai
+    - as nusivyles
+    - as labai liudnas
+    - as nelaimingas
+    - negerai
+    - nelabai gerai
+
+- intent: bot_challenge
+  examples: |
+    - ar tu botas?
+    - ar tu zmogus?
+    - ar as kalbu su robotu?
+    - ar as kalbu su zmogumi?
+
+- intent: thank
+  examples: |
+    - aciu
+    - dekui
+    - ac
+    - thanks
+    - labai aciu
+
+- intent: question_1
+  examples: |
+    - kas yra [objektinis programavimas] (topic)?
+    - ka reiskia [objektinis programavimas] (topic)?
+    - kas yra [objektinis programavimas] (topic)?
+    - kas [objektinis programavimas] (topic)?
+    - [objektinis programavimas] (topic)?
+
+- intent: question_2
+  examples: |
+    - o kas yra [objektas] (topic) objektiniame programavime?
+    - o kas yra [objektas] (topic)
+    - o ka reiskia [objektas] (topic)?
+    - kas yra [objektas] (topic)?
+
+- intent: not_understand
+  examples: |
+    - nesupratau
+    - gali patikslinti?
+    - nieko nesupratau
+    - wat
+    - nesuprantu
+    - patikslink

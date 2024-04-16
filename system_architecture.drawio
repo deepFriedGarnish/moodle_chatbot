@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2024-04-11T12:01:53.989Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Kw2sEiv9NDZOzr-FBWbd" version="24.1.0" type="device">
+  <diagram name="Page-1" id="pFixEqntfl-sAYGVwPXb">
+    <mxGraphModel dx="2234" dy="796" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-1" value="RASA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-594" y="70" width="212" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-2" value="FLASK Backend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-129" y="70" width="212" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-3" value="Frontend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="475" y="70" width="212" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-4" value="PostgreSQL database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-123" y="350" width="212" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-6" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="wjhQeoxR_VeWhIOBgXdf-3" target="wjhQeoxR_VeWhIOBgXdf-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="225" as="sourcePoint" />
+            <mxPoint x="105" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-8" value="Provide a prompt which would give an empty response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="217" y="109" width="181" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="wjhQeoxR_VeWhIOBgXdf-2" target="wjhQeoxR_VeWhIOBgXdf-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="225" as="sourcePoint" />
+            <mxPoint x="105" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-10" value="Request RASA to generate a response to this prompt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="102" width="181" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-11" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="wjhQeoxR_VeWhIOBgXdf-1" target="wjhQeoxR_VeWhIOBgXdf-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="225" as="sourcePoint" />
+            <mxPoint x="105" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-12" value="RASA sends a response with an empty answer" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-346" y="218" width="181" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-14" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="wjhQeoxR_VeWhIOBgXdf-2" target="wjhQeoxR_VeWhIOBgXdf-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="225" as="sourcePoint" />
+            <mxPoint x="105" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-15" value="Flask saves the prompt to the database table to label it as unanswered" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-73" y="284" width="181" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="wjhQeoxR_VeWhIOBgXdf-2" target="wjhQeoxR_VeWhIOBgXdf-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="55" y="225" as="sourcePoint" />
+            <mxPoint x="105" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wjhQeoxR_VeWhIOBgXdf-17" value="Flask sends a generic answer that the question cannot be answered" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="197" y="229" width="181" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

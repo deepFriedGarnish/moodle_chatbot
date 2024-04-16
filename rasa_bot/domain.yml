@@ -1,0 +1,89 @@
+version: "3.1"
+
+intents:
+  - greet
+  - thank
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - not_understand
+  - question_1
+  - question_2
+
+responses:
+  utter_greet:
+  - text: "Labas! Kuo galėčiau padėti?"
+  - text: "Labas! Kuo šiandiena galėčiau Tau padėti?"
+  - text: "Labukas! Kaip sekasi?"
+  - text: "Laba! Kaip einasi?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Ar tai tau padėjo?"
+  - text: "Ar tai padėjo nors kiek?"
+  - text: "Ar ši informacija buvo naudinga?"
+
+  utter_happy:
+  - text: "Puiku! Taip ir toliau!"
+ 
+  utter_goodbye:
+  - text: "Iki!"
+  - text: "Ate! Buvo smagu su Tavimi pasikalbėti!"
+  - text: "Iki kitų!"
+  - text: "Viso!"
+
+  utter_your_welcome:
+  - text: "Prašom! Gal dar turi klausimų?"
+  - text: "Nėra už ką!"
+  - text: "Visada!"
+  - text: "Nėra už ką, toks jau tas mano darbas :)"
+
+  utter_iamabot:
+  - text: "Aš esu moodle botas, kad palengvinčiau tau šio kurso mokymasi!"
+
+  utter_answer_1:
+  - text: "Tai programavimo paradigma, kuri paremta objekto sąvoka."
+
+  utter_answer_1_more:
+  - text: "Atsiprašau, pasistengsiu patikslinti. Objektinis programavimas (OP) yra programavimo paradigma, 
+  kurioje programos yra struktūrizuojamos kaip objektai, kurie yra duomenų struktūros, kuriantys vieną 
+  kitą ir bendraujantys vienas su kitu. Kiekvienas objektas gali turėti savo savybes (duomenis) ir 
+  veiksmus (metodus ar funkcijas), kurie gali manipuliuoti šiais duomenimis."
+
+  utter_answer_2:
+  - text: "Objektas – tai darinys, kurį sudaro duomenys (laukai) ir jų apdorojimo funkcijos (metodai)."
+
+  utter_answer_2_more:
+  - text: "Bandau patiklsinti. Objektas objektiniame programavime yra pagrindinė programavimo struktūra,
+  turinti savybes ir metodus. Jis atspindi realaus pasaulio sąvokas arba abstrakcijas, kurios yra svarbios 
+  programos kontekste. Objektas susideda iš duomenų (vadinamų objekto savybėmis arba būsenomis) ir metodų 
+  (vadinamų veiksmais arba funkcijomis), kurie gali manipuliuoti šiais duomenimis."
+
+  utter_clarify_what:
+  - text: "Ką norėtum, kad patikslinčiau?"
+  - text: "Jei gali apibūdink kas neaišku tiksliau."
+  - text: "Mielai patikslinsiu, tik primink ką norėtum, kad patikslinčiau?"
+
+  utter_not_understand_what:
+  - text: "Gal galėtum tiksliau aprašyt ko nesupranti? Mielai stengsiuosi atsakyti."
+
+# entities:
+# - topic
+
+# slots:
+#   topic:
+#     type: text
+#     influence_conversation: true
+#     mappings:
+#     - type: from_entity
+#       entity: topic
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

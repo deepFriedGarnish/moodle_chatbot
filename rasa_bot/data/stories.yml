@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: answering question 1
+  steps:
+  - intent: question_1
+  - action: utter_answer_1
+  - intent: not_understand
+  - action: utter_answer_1_more
+
+- story: answering question 2
+  steps:
+  - intent: question_2
+  - action: utter_answer_2
+  - intent: not_understand
+  - action: utter_answer_2_more
+
+# - story: not understanding something
+#   steps:
+#   - intent: not_understand
+#     entities:
+#     - topic: "objektas"
+#   - action: utter_answer_2_more
+#     entities:
+#     - topic: "objektinis programavimas"
+#   - action: utter_answer_2_more
