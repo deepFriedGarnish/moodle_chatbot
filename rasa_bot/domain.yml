@@ -73,17 +73,6 @@ responses:
   utter_not_understand_what:
   - text: "Gal galėtum tiksliau aprašyt ko nesupranti? Mielai stengsiuosi atsakyti."
 
-# entities:
-# - topic
-
-# slots:
-#   topic:
-#     type: text
-#     influence_conversation: true
-#     mappings:
-#     - type: from_entity
-#       entity: topic
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

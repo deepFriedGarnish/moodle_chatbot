@@ -12,6 +12,8 @@ key = os.environ.get("SUPABASE_KEY")
 
 supabase = connectToDB(url, key)
 
+UNANSWERED_PROMPT_TABLE = 'unanswered_prompt'
+
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 CORS(app)
 
@@ -55,18 +57,26 @@ def predict():
         'answer': answer
     })
 
-@app.post("/prompt")
+@app.post("/unansweredPrompt")
 def uploadUnansweredPromptToDB():
     jsonData = request.get_json()
     prompt = jsonData['message']
-    print(prompt)
-    return prompt
+    
+    supabase.table(UNANSWERED_PROMPT_TABLE).insert(
+        {
+            "prompt_text": prompt
+        }
+    ).execute()
+    print(f'Unanswered prompt "{prompt}" inserted into DB successfully.')
+    return 'Unanswered prompt inserted into DB successfully'
 
 @app.post("/duplicatePrompt")
-def uploadUnansweredPromptToDB():
+def uploadDublicatePromptToDB():
     jsonData = request.get_json()
     prompt = jsonData['message']
+    conversation = jsonData['conversation']
     print(prompt)
+    print(conversation)
     return prompt
 
 if __name__ == '__main__':
