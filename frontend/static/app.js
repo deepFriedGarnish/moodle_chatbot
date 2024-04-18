@@ -6,6 +6,8 @@ const duplicate_promp_message = ['Atsiprašau, nebeturiu daugiau žinių šiuo k
 
 const FLASK_API_HOST_NAME = 'http://127.0.0.1:5000';
 const CONTENT_TYPE = 'application/json';
+const UNANSWERED_TYPE = 'unanswered';
+const DUPLICATE_TYPE = 'duplicate';
 
 class Chatbox {
     constructor() {
@@ -94,7 +96,9 @@ class Chatbox {
                 fetch(`${FLASK_API_HOST_NAME}/unansweredPrompt`, {
                     method: 'POST',
                     body: JSON.stringify({
-                        message: inputText
+                        message: inputText,
+                        conversation: removeLTCharacters(JSON.stringify(this.messages)),
+                        type: UNANSWERED_TYPE
                     }),
                     mode: 'cors',
                     headers: {
@@ -119,13 +123,13 @@ class Chatbox {
                     name: 'Sam',
                     message: duplicate_promp_message
                 };
-                console.log(removeLTCharacters(JSON.stringify(this.messages)));
                 // Call backend API to upload the question to DB
-                fetch(`${FLASK_API_HOST_NAME}/duplicatePrompt`, {
+                fetch(`${FLASK_API_HOST_NAME}/unansweredPrompt`, {
                     method: 'POST',
                     body: JSON.stringify({
                         message: inputText,
-                        conversation: removeLTCharacters(JSON.stringify(this.messages))
+                        conversation: removeLTCharacters(JSON.stringify(this.messages)),
+                        type: DUPLICATE_TYPE
                     }),
                     mode: 'cors',
                     headers: {

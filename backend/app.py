@@ -62,35 +62,19 @@ def predict():
 def uploadUnansweredPromptToDB():
     jsonData = request.get_json()
     prompt = jsonData['message']
+    conversation = json.loads(jsonData['conversation'])
+    prompt_type = jsonData['type']
     
     supabase.table(UNANSWERED_PROMPT_TABLE).insert(
         {
-            "prompt_text": prompt
+            "prompt_text": prompt,
+            "conversation": conversation,
+            "type": prompt_type
         }
     ).execute()
 
     print(f'Unanswered prompt "{prompt}" inserted into DB successfully.')
     return 'Unanswered prompt inserted into DB successfully'
-
-@app.post("/duplicatePrompt")
-def uploadDublicatePromptToDB():
-    jsonData = request.get_json()
-    prompt = jsonData['message']
-    conversation = json.loads(jsonData['conversation'])
-
-    supabase.table(CONVERSATION_TABLE).insert(
-        {
-            "conversation_text": conversation
-        }
-    ).execute()
-    supabase.table(UNANSWERED_PROMPT_TABLE).insert(
-        {
-            "prompt_text": prompt
-        }
-    ).execute()
-
-    print(f'Duplicate prompt "{prompt}" inserted into DB successfully.')
-    return 'Duplicate prompt inserted into DB successfully'
 
 if __name__ == '__main__':
     app.run(debug = True)
