@@ -13,6 +13,7 @@ key = os.environ.get("SUPABASE_KEY")
 supabase = connectToDB(url, key)
 
 UNANSWERED_PROMPT_TABLE = 'unanswered_prompt'
+CONVERSATION_TABLE = 'conversation'
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 CORS(app)
@@ -67,6 +68,7 @@ def uploadUnansweredPromptToDB():
             "prompt_text": prompt
         }
     ).execute()
+
     print(f'Unanswered prompt "{prompt}" inserted into DB successfully.')
     return 'Unanswered prompt inserted into DB successfully'
 
@@ -74,10 +76,21 @@ def uploadUnansweredPromptToDB():
 def uploadDublicatePromptToDB():
     jsonData = request.get_json()
     prompt = jsonData['message']
-    conversation = jsonData['conversation']
-    print(prompt)
-    print(conversation)
-    return prompt
+    conversation = json.loads(jsonData['conversation'])
+
+    supabase.table(CONVERSATION_TABLE).insert(
+        {
+            "conversation_text": conversation
+        }
+    ).execute()
+    supabase.table(UNANSWERED_PROMPT_TABLE).insert(
+        {
+            "prompt_text": prompt
+        }
+    ).execute()
+
+    print(f'Duplicate prompt "{prompt}" inserted into DB successfully.')
+    return 'Duplicate prompt inserted into DB successfully'
 
 if __name__ == '__main__':
     app.run(debug = True)
