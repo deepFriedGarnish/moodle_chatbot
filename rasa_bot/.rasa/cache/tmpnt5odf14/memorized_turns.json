@@ -1,0 +1,17 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xArITUxPjU+tSMwtyEktrq2NBQDzTR9B": "action_provide_examples",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xArITUxPjU+tSMwtyEktriXOsIKi/LLMFCRtBI2NBQBJZUD5": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohL78kvjQvJbWouCQxL6W2NhYA9JIfVg==": "action_clarify_question",
+    "eJyNjNEJgDAMBVfpAE7QVURKaCMEatQkFaR0dyv6r3/vHseNtQ2uboJHgGi0snf1GYFhQe9eyKSG3N2iKN0h7mje8WqhcEJRA07tXyxmEJrPsBfU+/jOThdTw0Et": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhPCO1KDU+szg+syQeKJVSWxsLADLzIBA=": "action_explain_usage",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhPCO1KDU+szg+syQeKJVSS5xxqRUFOYmZeUAtiempxJgaCwCHEEFF": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhsDS1GKzAsLY2FgB5hx12": "action_answer_question",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhsDS1GKzAsJY4gxLzistTi+Jh+vCbGAsA/t89Ew==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhsDS1GKzAqLY2FgB5ix13": "action_answer_question",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhsDS1GKzAqJY4gxLzistTi+Jh+vCbGAsA/zk9FQ==": "action_listen"
+  }
+}

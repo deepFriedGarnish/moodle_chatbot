@@ -6,39 +6,28 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: Kas yra objektinis programavimas?
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - intent: question_1
+    - action: action_answer_question
 
-- story: sad path 2
+- story: Kas yra objektas?
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: question_2
+    - action: action_answer_question
 
-- story: answering question 1
+- story: Kažko nesuprantu
   steps:
-  - intent: question_1
-  - action: utter_answer_1
-  - intent: not_understand
-  - action: utter_answer_1_more
+    - intent: not_understand
+    - action: action_clarify_question
 
-- story: answering question 2
+- story: Pateik pavyzdžių
   steps:
-  - intent: question_2
-  - action: utter_answer_2
-  - intent: not_understand
-  - action: utter_answer_2_more
+    - intent: usage_examples
+    - action: action_provide_examples
+
+- story: Kur tai naudojama
+  steps:
+    - intent: where_is_it_used
+    - action: action_explain_usage

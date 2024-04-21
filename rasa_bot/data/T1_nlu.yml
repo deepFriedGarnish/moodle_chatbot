@@ -1,0 +1,16 @@
+version: "3.1"
+
+nlu:
+- intent: question_1
+  examples: |
+    - kas yra objektinis programavimas?
+    - ka reiskia objektinis programavimas?
+    - kas yra objektinis programavimas?
+    - objektinis programavimas?
+
+- intent: question_2
+  examples: |
+    - o kas yra objektas objektiniame programavime?
+    - o kas yra objektas
+    - o ka reiskia objektas?
+    - kas yra objektas?

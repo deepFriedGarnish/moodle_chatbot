@@ -1,66 +1,65 @@
 from typing import Any, Text, Dict, List
-import requests
-import json
-import os
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 
-openai_api_key = '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'
-chat_gpt_url = 'https://api.openai.com/v1/chat/completions'
-
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {openai_api_key}"
-}
-
-data = {
-    "model": "gpt-3.5-turbo",
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are a helpful assistant."
-        },
-        {
-            "role": "user",
-            "content": "Hello!"
-        }
-    ]
-}
-
-class ActionHelloWorld(Action):
+class ActionAnswerQuestion(Action):
     def name(self) -> Text:
-        return "action_hello_world"
+        return "action_answer_question"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    def run(self,
+            dispatcher: CollectingDispatcher,
             tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="Hello World!")
-        return []
+            domain: Dict[Text, Any]) -> List:
+        
+        current_intent = tracker.latest_message['intent'].get('name')
+
+        if current_intent.find("question") != 1:
+            dispatcher.utter_message(response = 'utter_' + current_intent + '_answer') 
+
+        return [SlotSet("current_topic", current_intent)]
     
-class ActionAskChatGPT(Action):
+class ActionClarifyQuestion(Action):
     def name(self) -> Text:
-        return "action_ask_chat_gpt"
+        return "action_clarify_question"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    def run(self,
+            dispatcher: CollectingDispatcher,
             tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        if openai_api_key is None:
-            raise ValueError("OpenAI API key is not set in environment variables.")
-        
-        response = requests.post(chat_gpt_url, headers=headers, json=data)
-        response_message = 'NONE'
+            domain: Dict[Text, Any]) -> List:
 
-        if response.status_code == 200:
-            print("Response from OpenAI:", response.json())
-            print("\n")
-            response_message = response.json()['choices'][0]['message']['content']
-            print(response_message)
-        else:
-            print("Error:", response.status_code, response.text)
-        
-        # user_message = tracker.latest_message.get('text')
-        
-        dispatcher.utter_message(text=response_message)
+        current_topic = tracker.get_slot("current_topic")
+
+        dispatcher.utter_message(response = 'utter_' + current_topic + '_answer_more')
+
+        return []
+
+class ActionProvideExamples(Action):
+    def name(self) -> Text:
+        return "action_provide_examples"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        current_topic = tracker.get_slot("current_topic")
+
+        dispatcher.utter_message(response = 'utter_' + current_topic + '_provide_example')
+
+        return []
+
+class ActionProvideExamples(Action):
+    def name(self) -> Text:
+        return "action_explain_usage"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        current_topic = tracker.get_slot("current_topic")
+
+        dispatcher.utter_message(response = 'utter_' + current_topic + '_usage')
+
         return []

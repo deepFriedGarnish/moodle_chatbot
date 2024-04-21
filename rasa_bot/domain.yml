@@ -12,17 +12,16 @@ intents:
   - not_understand
   - question_1
   - question_2
+  - usage_examples
+  - where_is_it_used
 
 responses:
+# Default question responses -----------------------------------------------------------------------------------
   utter_greet:
   - text: "Labas! Kuo galėčiau padėti?"
   - text: "Labas! Kuo šiandiena galėčiau Tau padėti?"
   - text: "Labukas! Kaip sekasi?"
   - text: "Laba! Kaip einasi?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Ar tai tau padėjo?"
@@ -45,25 +44,7 @@ responses:
   - text: "Nėra už ką, toks jau tas mano darbas :)"
 
   utter_iamabot:
-  - text: "Aš esu moodle botas, kad palengvinčiau tau šio kurso mokymasi!"
-
-  utter_answer_1:
-  - text: "Tai programavimo paradigma, kuri paremta objekto sąvoka."
-
-  utter_answer_1_more:
-  - text: "Atsiprašau, pasistengsiu patikslinti. Objektinis programavimas (OP) yra programavimo paradigma, 
-  kurioje programos yra struktūrizuojamos kaip objektai, kurie yra duomenų struktūros, kuriantys vieną 
-  kitą ir bendraujantys vienas su kitu. Kiekvienas objektas gali turėti savo savybes (duomenis) ir 
-  veiksmus (metodus ar funkcijas), kurie gali manipuliuoti šiais duomenimis."
-
-  utter_answer_2:
-  - text: "Objektas – tai darinys, kurį sudaro duomenys (laukai) ir jų apdorojimo funkcijos (metodai)."
-
-  utter_answer_2_more:
-  - text: "Bandau patiklsinti. Objektas objektiniame programavime yra pagrindinė programavimo struktūra,
-  turinti savybes ir metodus. Jis atspindi realaus pasaulio sąvokas arba abstrakcijas, kurios yra svarbios 
-  programos kontekste. Objektas susideda iš duomenų (vadinamų objekto savybėmis arba būsenomis) ir metodų 
-  (vadinamų veiksmais arba funkcijomis), kurie gali manipuliuoti šiais duomenimis."
+  - text: "Aš esu moodle botas! Esu skirtas padėti Tau mokantis šiame kurse :)"
 
   utter_clarify_what:
   - text: "Ką norėtum, kad patikslinčiau?"
@@ -72,6 +53,57 @@ responses:
 
   utter_not_understand_what:
   - text: "Gal galėtum tiksliau aprašyt ko nesupranti? Mielai stengsiuosi atsakyti."
+# --------------------------------------------------------------------------------------------------------------
+
+# Kas yra objektinis programavimas? ----------------------------------------------------------------------------
+  utter_question_1_answer:
+  - text: "Tai programavimo paradigma, kuri paremta objekto sąvoka."
+
+  utter_question_1_answer_more:
+  - text: "Pasistengsiu patikslinti. Objektinis programavimas (OP) yra programavimo paradigma, 
+  kurioje programos yra struktūrizuojamos kaip objektai, kurie yra duomenų struktūros, kuriantys vieną 
+  kitą ir bendraujantys vienas su kitu. Kiekvienas objektas gali turėti savo savybes (duomenis) ir 
+  veiksmus (metodus ar funkcijas), kurie gali manipuliuoti šiais duomenimis."
+
+  utter_question_1_provide_example:
+  - text: "Objektinio programavimo panaudojimo pavyzdys:"
+
+  utter_question_1_usage:
+  - text: "Objektinio programavimo panaudojimas:"
+# --------------------------------------------------------------------------------------------------------------
+
+# Kas yra objektas? --------------------------------------------------------------------------------------------
+  utter_question_2_answer:
+  - text: "Objektas – tai darinys, kurį sudaro duomenys (laukai) ir jų apdorojimo funkcijos (metodai)."
+
+  utter_question_2_answer_more:
+  - text: "Bandau patiklsinti. Objektas objektiniame programavime yra pagrindinė programavimo struktūra,
+  turinti savybes ir metodus. Jis atspindi realaus pasaulio sąvokas arba abstrakcijas, kurios yra svarbios 
+  programos kontekste. Objektas susideda iš duomenų (vadinamų objekto savybėmis arba būsenomis) ir metodų 
+  (vadinamų veiksmais arba funkcijomis), kurie gali manipuliuoti šiais duomenimis."
+
+  utter_question_2_provide_example:
+  - text: "Objekto panaudojimo pavyzdys:"
+
+  utter_question_2_usage:
+  - text: "Objekto panaudojimas:"
+# --------------------------------------------------------------------------------------------------------------
+
+slots:
+  current_topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: current_topic
+
+entities:
+  - current_topic
+
+actions:
+  - action_answer_question
+  - action_clarify_question
+  - action_provide_examples
+  - action_explain_usage
 
 session_config:
   session_expiration_time: 60
