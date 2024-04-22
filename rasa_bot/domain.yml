@@ -11,7 +11,13 @@ intents:
   - bot_challenge
   - not_understand
   - question_1
+  - question_1_usage
+  - question_1_examples
+  - question_1_readmore
   - question_2
+  - question_2_usage
+  - question_2_examples
+  - question_2_readmore
   - usage_examples
   - where_is_it_used
 
@@ -70,6 +76,9 @@ responses:
 
   utter_question_1_usage:
   - text: "Objektinio programavimo panaudojimas:"
+
+  utter_question_1_readmore:
+  - text: "Informacijos apie objektinį programavimą gali rasti T1 3/39 skaidrėje"
 # --------------------------------------------------------------------------------------------------------------
 
 # Kas yra objektas? --------------------------------------------------------------------------------------------
@@ -87,6 +96,9 @@ responses:
 
   utter_question_2_usage:
   - text: "Objekto panaudojimas:"
+
+  utter_question_2_readmore:
+  - text: "Informacijos apie objekto sąvoką gali rasti T1 3/39 skaidrėje"
 # --------------------------------------------------------------------------------------------------------------
 
 slots:
@@ -104,6 +116,7 @@ actions:
   - action_clarify_question
   - action_provide_examples
   - action_explain_usage
+  - action_provide_readmore
 
 session_config:
   session_expiration_time: 60

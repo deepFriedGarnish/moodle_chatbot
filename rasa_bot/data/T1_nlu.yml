@@ -1,16 +1,52 @@
 version: "3.1"
 
 nlu:
+# Objektinis programavimas -----------------------------------------------------------
 - intent: question_1
   examples: |
-    - kas yra objektinis programavimas?
-    - ka reiskia objektinis programavimas?
-    - kas yra objektinis programavimas?
-    - objektinis programavimas?
+    - kas yra objektinis programavimas
+    - ka reiskia objektinis programavimas
+    - kas yra objektinis programavimas
+    - objektinis programavimas
 
+- intent: question_1_usage
+  examples: |
+    - kur naudojamas objektinis programavimas
+    - panaudojimas objektinis programavimas
+
+- intent: question_1_examples
+  examples: |
+    - pateik objektinio programavimo pavyzdziu
+    - objektinio programavimo pavyzdziai
+
+- intent: question_1_readmore
+  examples: |
+    - kur rasti info apie objektini programavima
+    - kur galeciau daugiau pasiskaityti apie apie objektini programavima
+    - kurioje skaidreje raso apie objektini programavima
+# ------------------------------------------------------------------------------------
+
+# Objektas ---------------------------------------------------------------------------
 - intent: question_2
   examples: |
     - o kas yra objektas objektiniame programavime?
     - o kas yra objektas
     - o ka reiskia objektas?
     - kas yra objektas?
+
+- intent: question_2_usage
+  examples: |
+    - kur naudojamas objektas
+    - kaip panaudojamas objektas
+
+- intent: question_2_examples
+  examples: |
+    - pateik objekto pavyzdziu
+    - objektu pavyzdziai
+
+- intent: question_2_readmore
+  examples: |
+    - kur rasti info apie objektus
+    - kur galeciau daugiau pasiskaityti apie apie objektus
+    - kurioje skaidreje raso apie objekta
+  # ------------------------------------------------------------------------------------

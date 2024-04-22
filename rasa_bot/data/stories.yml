@@ -7,15 +7,27 @@ stories:
   - intent: greet
   - action: utter_greet
 
+# Objektinis programavimas -----------------------------------------------------------
 - story: Kas yra objektinis programavimas?
   steps:
-    - intent: question_1
+    - or:
+      - intent: question_1
+      - intent: question_1_usage
+      - intent: question_1_examples
+      - intent: question_1_readmore
     - action: action_answer_question
+# ------------------------------------------------------------------------------------
 
+# Objektas ---------------------------------------------------------------------------
 - story: Kas yra objektas?
   steps:
-    - intent: question_2
+    - or:
+      - intent: question_2
+      - intent: question_2_usage
+      - intent: question_2_examples
+      - intent: question_2_readmore
     - action: action_answer_question
+# ------------------------------------------------------------------------------------
 
 - story: Kažko nesuprantu
   steps:

@@ -76,7 +76,8 @@ nlu:
   
 - intent: usage_examples
   examples: |
-    - ar gali pateikti panaudojimo pavyzdžių?
-    - pateik pavyzdžių
-    - duok man pavyzdį
-    - na pavyzdžiui
+    - ar gali pateikti panaudojimo pavyzdziu
+    - pateik pavyzdziu
+    - duok man pavyzdi
+    - na pavyzdziui
+    - pvz
