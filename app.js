@@ -98,6 +98,7 @@ chatboxDiv.append(chatbox__buttonDiv);
 containerDiv.append(chatboxDiv);
 body.append(containerDiv);
 
+
 class Chatbox {
     constructor() {
         this.args = {
