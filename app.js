@@ -108,6 +108,9 @@ class Chatbox {
         }
         this.state = false;
         this.messages = [];
+
+        this.bot_replies = [];
+        this.user_prompts = [];
     }
 
     display() {
