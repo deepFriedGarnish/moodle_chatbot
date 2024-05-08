@@ -81,3 +81,10 @@ nlu:
     - duok man pavyzdi
     - na pavyzdziui
     - pvz
+
+- intent: read_more
+  examples: |
+    - kur galima daugiau pasiskaityti
+    - rasti daugiau info
+    - kurioje skaidreje info
+    - kur skaityti daugiau

@@ -43,8 +43,3 @@ stories:
   steps:
     - intent: where_is_it_used
     - action: action_explain_usage
-
-- story: Kur galima daugiau pasiskaityti
-  steps:
-    - intent: read_more
-    - action: action_provide_readmore

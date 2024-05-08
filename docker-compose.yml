@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  rasa-api:
+    build: ./rasa_bot
+    volumes: 
+      - ./rasa_bot:/usr/src/app
+    ports:
+      - "5005:5005"
+    expose:
+      - "5005"
+  rasa-action-api:
+    build: ./rasa_bot/actions
+    volumes: 
+      - ./rasa_bot/actions:/usr/src/app
+    ports:
+      - "5055:5055"
+    expose:
+      - "5055"
+  training-app:
+    build: ./training_app/training-app
+    volumes: 
+      - ./training_app/training-app:/usr/src/app
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"

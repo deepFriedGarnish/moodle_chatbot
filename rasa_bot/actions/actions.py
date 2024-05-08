@@ -83,7 +83,7 @@ class ActionProvideExamples(Action):
 
         return []
     
-class ActionProvideExamples(Action):
+class ActionProvideReadmore(Action):
     def name(self) -> Text:
         return "action_provide_readmore"
 
@@ -95,5 +95,18 @@ class ActionProvideExamples(Action):
         current_topic = tracker.get_slot("current_topic")
 
         dispatcher.utter_message(response = 'utter_' + current_topic + '_readmore')
+
+        return []
+    
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        dispatcher.utter_message(response = 'utter_default_fallback')
 
         return []
