@@ -2,6 +2,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, FollowupAction
+import requests
 
 class ActionAnswerQuestion(Action):
     def name(self) -> Text:
@@ -13,17 +14,26 @@ class ActionAnswerQuestion(Action):
             domain: Dict[Text, Any]) -> List:
         
         current_intent = tracker.latest_message['intent'].get('name')
-        temp_array = current_intent.split('_')
+        split_intent_array = current_intent.split('_')
         current_topic = ''
+        topic_id = 0
 
 
         # Cut of the unnecessary end of the intent string
         for i in range(2):
             if i != 1:
-                current_topic += temp_array[i]
+                current_topic += split_intent_array[i]
                 current_topic += '_'
             else:
-                current_topic += temp_array[i]
+                current_topic += split_intent_array[i]
+
+        topic_id = getCurrentTopicId(split_intent_array)
+        
+        # Update FAQ table
+        data = {
+            'topicId': topic_id
+        }
+        requests.post('http://localhost:5000/updateFAQ', json=data)
 
         # Check if user asked for straight variations of the topic
         if current_intent.find("question") != 1:
@@ -110,3 +120,10 @@ class ActionDefaultFallback(Action):
         dispatcher.utter_message(response = 'utter_default_fallback')
 
         return []
+    
+def getCurrentTopicId(split_intent_array):
+    for i in range(2):
+        if i != 1:
+            continue
+        else:
+            return int(split_intent_array[i])

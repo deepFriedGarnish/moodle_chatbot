@@ -1,52 +1,92 @@
 version: "3.1"
 
 nlu:
-# Objektinis programavimas -----------------------------------------------------------
-- intent: question_1
+- intent: greet
   examples: |
-    - kas yra objektinis programavimas
-    - ka reiskia objektinis programavimas
-    - kas yra objektinis programavimas
-    - objektinis programavimas
+    - labas
+    - hello
+    - hi
+    - sveikas
 
-- intent: question_1_usage
+- intent: goodbye
   examples: |
-    - kur naudojamas objektinis programavimas
-    - panaudojimas objektinis programavimas
+    - ate
+    - iki susitikimo
+    - viso gero
+    - bye
 
-- intent: question_1_examples
+- intent: affirm
   examples: |
-    - pateik objektinio programavimo pavyzdziu
-    - objektinio programavimo pavyzdziai
+    - taip
+    - žinoma
+    - y
+    - gerai
 
-- intent: question_1_readmore
+- intent: deny
   examples: |
-    - kur rasti info apie objektini programavima
-    - kur galeciau daugiau pasiskaityti apie apie objektini programavima
-    - kurioje skaidreje raso apie objektini programavima
-# ------------------------------------------------------------------------------------
+    - ne
+    - niekada
+    - nemanau
+    - man nepatinka
+    - nė per kur
 
-# Objektas ---------------------------------------------------------------------------
-- intent: question_2
+- intent: mood_great
   examples: |
-    - o kas yra objektas objektiniame programavime?
-    - o kas yra objektas
-    - o ka reiskia objektas?
-    - kas yra objektas?
+    - nuostabus
+    - puikus
+    - jauciuosi puikiai
+    - pas mane viskas gerai
+    - tobulai
 
-- intent: question_2_usage
+- intent: mood_unhappy
   examples: |
-    - kur naudojamas objektas
-    - kaip panaudojamas objektas
+    - man nesiseka
+    - nesijauciu gerai
+    - as nusivyles
+    - as labai liudnas
+    - as nelaimingas
+    - negerai
 
-- intent: question_2_examples
+- intent: bot_challenge
   examples: |
-    - pateik objekto pavyzdziu
-    - objektu pavyzdziai
+    - ar tu botas?
+    - ar tu zmogus?
+    - ar as kalbu su robotu?
+    - ar as kalbu su zmogumi?
+    - kas tu?
 
-- intent: question_2_readmore
+- intent: thank
   examples: |
-    - kur rasti info apie objektus
-    - kur galeciau daugiau pasiskaityti apie apie objektus
-    - kurioje skaidreje raso apie objekta
-  # ------------------------------------------------------------------------------------
+    - aciu
+    - dekui
+    - thanks
+
+- intent: not_understand
+  examples: |
+    - nesupratau
+    - gali patikslinti?
+    - nesuprantu
+    - patikslink
+
+- intent: where_is_it_used
+  examples: |
+    - kur tai naudojama
+    - kaip tai naudojama
+    - panaudojimas
+    - o kur jos naudojamos
+  
+- intent: usage_examples
+  examples: |
+    - ar gali pateikti panaudojimo pavyzdziu
+    - pateik pavyzdziu
+    - duok man pavyzdi
+    - na pavyzdziui
+    - pvz
+
+- intent: read_more
+  examples: |
+    - kur galima daugiau pasiskaityti
+    - rasti daugiau info
+    - kurioje skaidreje info
+    - kur skaityti daugiau
+    - kur galeciau pasiskaityti

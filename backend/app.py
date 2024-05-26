@@ -16,6 +16,7 @@ supabase = connectToDB(url, key)
 UNANSWERED_PROMPT_TABLE = 'unanswered_prompt'
 CONVERSATION_TABLE = 'conversation'
 TRAINING_DATA_TABLE = 'training_data'
+FAQ_TABLE = 'faq'
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 CORS(app)
@@ -92,7 +93,7 @@ def uploadUnansweredPromptToDB():
 @app.post("/updateConversation")
 def updateConversation():
     jsonData = request.get_json()
-    row_id = jsonData.get('conversationId')
+    row_id = int(jsonData.get('conversationId'))
     conversation = jsonData.get('conversation')
 
     if (row_id == 0):
@@ -177,16 +178,68 @@ def trainNewModel():
     response = supabase.table(TRAINING_DATA_TABLE).select('*').execute()
     training_data = response.data
 
+    # All needed default filepaths for rasa model retraining
+    default_domain_filepath = './rasa_bot/default_data_files/default_domain.yml'
+    default_nlu_filepath = './rasa_bot/default_data_files/default_nlu.yml'
+    default_stories_filepath = './rasa_bot/default_data_files/default_stories.yml'
+
     # All needed filepaths for rasa model retraining
     domain_filepath = './rasa_bot/domain.yml'
     nlu_filepath = './rasa_bot/data/nlu.yml'
     stories_filepath = './rasa_bot/data/stories.yml'
 
-    writeToYAML_Domain(training_data, domain_filepath)
-    writeToYAML_NLU(training_data, nlu_filepath)
-    writeToYAML_Story(training_data, stories_filepath)
+    writeToYAML_Domain(training_data, domain_filepath, default_domain_filepath)
+    writeToYAML_NLU(training_data, nlu_filepath, default_nlu_filepath)
+    writeToYAML_Story(training_data, stories_filepath, default_stories_filepath)
 
     return []
 
+@app.post("/updateFAQ")
+def updateFAQ():
+    data = request.get_json()
+
+    topics = supabase.table(FAQ_TABLE).select('*').execute()
+    if len(topics.data) != 0:
+        for topic in topics.data:
+            if topic['topicId'] == data['topicId']:
+                supabase.table(FAQ_TABLE).update({
+                    'count': int(topic['count']) + 1
+                }).eq('topicId', topic['topicId']).execute()
+                return []
+    
+    supabase.table(FAQ_TABLE).insert({
+        'topicId': data['topicId']
+    }).execute()
+    return []
+
+@app.get("/faq")
+def faq():
+    topics = supabase.table(FAQ_TABLE).select('*').order('count', desc=True).limit(10).execute()
+    result = []
+
+    for topic in topics.data:
+        response = supabase.table(TRAINING_DATA_TABLE).select('story_name').eq('id', int(topic['topicId'])).execute()
+        if (len(response.data) != 0):
+            result.append(response.data[0]['story_name'])
+
+    return json.dumps(result)
+
+@app.get("/getFAQ")
+def getFAQ():
+    topics = supabase.table(FAQ_TABLE).select('*').order('count', desc=True).execute()
+    final_result = []
+
+    for item in topics.data:
+        response = supabase.table(TRAINING_DATA_TABLE).select('story_name').eq('id', int(item['topicId'])).execute()
+        if (len(response.data) != 0):
+            result_item = {
+                'id': item['id'],
+                'topic': response.data[0]['story_name'],
+                'count': item['count']
+            }
+            final_result.append(result_item)
+
+    return jsonify(final_result)
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)

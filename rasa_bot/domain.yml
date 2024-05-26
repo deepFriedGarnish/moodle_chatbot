@@ -1,117 +1,1134 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - thank
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - not_understand
-  - question_1
-  - question_1_usage
-  - question_1_examples
-  - question_1_readmore
-  - question_2
-  - question_2_usage
-  - question_2_examples
-  - question_2_readmore
-  - usage_examples
-  - where_is_it_used
-
+- greet
+- thank
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- not_understand
+- usage_examples
+- where_is_it_used
+- read_more
+- question_16
+- question_16_usage
+- question_16_examples
+- question_16_readmore
+- question_17
+- question_17_usage
+- question_17_examples
+- question_17_readmore
+- question_22
+- question_22_usage
+- question_22_examples
+- question_22_readmore
+- question_18
+- question_18_usage
+- question_18_examples
+- question_18_readmore
+- question_19
+- question_19_usage
+- question_19_examples
+- question_19_readmore
+- question_21
+- question_21_usage
+- question_21_examples
+- question_21_readmore
+- question_23
+- question_23_usage
+- question_23_examples
+- question_23_readmore
+- question_25
+- question_25_usage
+- question_25_examples
+- question_25_readmore
+- question_26
+- question_26_usage
+- question_26_examples
+- question_26_readmore
+- question_34
+- question_34_usage
+- question_34_examples
+- question_34_readmore
+- question_36
+- question_36_usage
+- question_36_examples
+- question_36_readmore
+- question_24
+- question_24_usage
+- question_24_examples
+- question_24_readmore
+- question_27
+- question_27_usage
+- question_27_examples
+- question_27_readmore
+- question_28
+- question_28_usage
+- question_28_examples
+- question_28_readmore
+- question_29
+- question_29_usage
+- question_29_examples
+- question_29_readmore
+- question_31
+- question_31_usage
+- question_31_examples
+- question_31_readmore
+- question_32
+- question_32_usage
+- question_32_examples
+- question_32_readmore
+- question_33
+- question_33_usage
+- question_33_examples
+- question_33_readmore
+- question_35
+- question_35_usage
+- question_35_examples
+- question_35_readmore
+- question_38
+- question_38_usage
+- question_38_examples
+- question_38_readmore
+- question_39
+- question_39_usage
+- question_39_examples
+- question_39_readmore
+- question_40
+- question_40_usage
+- question_40_examples
+- question_40_readmore
+- question_41
+- question_41_usage
+- question_41_examples
+- question_41_readmore
+- question_42
+- question_42_usage
+- question_42_examples
+- question_42_readmore
+- question_43
+- question_43_usage
+- question_43_examples
+- question_43_readmore
+- question_44
+- question_44_usage
+- question_44_examples
+- question_44_readmore
+- question_45
+- question_45_usage
+- question_45_examples
+- question_45_readmore
+- question_46
+- question_46_usage
+- question_46_examples
+- question_46_readmore
+- question_47
+- question_47_usage
+- question_47_examples
+- question_47_readmore
+- question_48
+- question_48_usage
+- question_48_examples
+- question_48_readmore
+- question_49
+- question_49_usage
+- question_49_examples
+- question_49_readmore
+- question_50
+- question_50_usage
+- question_50_examples
+- question_50_readmore
+- question_51
+- question_51_usage
+- question_51_examples
+- question_51_readmore
+- question_52
+- question_52_usage
+- question_52_examples
+- question_52_readmore
+- question_30
+- question_30_usage
+- question_30_examples
+- question_30_readmore
+- question_37
+- question_37_usage
+- question_37_examples
+- question_37_readmore
+- question_20
+- question_20_usage
+- question_20_examples
+- question_20_readmore
 responses:
-# Default question responses -----------------------------------------------------------------------------------
   utter_greet:
-  - text: "Labas! Kuo galėčiau padėti?"
-  - text: "Labas! Kuo šiandiena galėčiau Tau padėti?"
-  - text: "Labukas! Kaip sekasi?"
-  - text: "Laba! Kaip einasi?"
-
+  - text: "Labas! Kuo gal\u0117\u010Diau pad\u0117ti?"
+  - text: "Labas! Kuo \u0161iandiena gal\u0117\u010Diau Tau pad\u0117ti?"
+  - text: Labukas! Kaip sekasi?
+  - text: Laba! Kaip einasi?
   utter_did_that_help:
-  - text: "Ar tai tau padėjo?"
-  - text: "Ar tai padėjo nors kiek?"
-  - text: "Ar ši informacija buvo naudinga?"
-
+  - text: "Ar tai tau pad\u0117jo?"
+  - text: "Ar tai pad\u0117jo nors kiek?"
+  - text: "Ar \u0161i informacija buvo naudinga?"
   utter_happy:
-  - text: "Puiku! Taip ir toliau!"
- 
+  - text: Puiku! Taip ir toliau!
   utter_goodbye:
-  - text: "Iki!"
-  - text: "Ate! Buvo smagu su Tavimi pasikalbėti!"
-  - text: "Iki kitų!"
-  - text: "Viso!"
-
+  - text: Iki!
+  - text: "Ate! Buvo smagu su Tavimi pasikalb\u0117ti!"
+  - text: "Iki kit\u0173!"
+  - text: Viso!
   utter_your_welcome:
-  - text: "Prašom! Gal dar turi klausimų?"
-  - text: "Nėra už ką!"
-  - text: "Visada!"
-  - text: "Nėra už ką, toks jau tas mano darbas :)"
-
+  - text: "Pra\u0161om! Gal dar turi klausim\u0173?"
+  - text: "N\u0117ra u\u017E k\u0105!"
+  - text: Visada!
+  - text: "N\u0117ra u\u017E k\u0105, toks jau tas mano darbas :)"
   utter_iamabot:
-  - text: "Aš esu moodle botas! Esu skirtas padėti Tau mokantis šiame kurse :)"
-
+  - text: "A\u0161 esu moodle botas! Esu skirtas pad\u0117ti Tau mokantis \u0161iame\
+      \ kurse :)"
   utter_clarify_what:
-  - text: "Ką norėtum, kad patikslinčiau?"
-  - text: "Jei gali apibūdink kas neaišku tiksliau."
-  - text: "Mielai patikslinsiu, tik primink ką norėtum, kad patikslinčiau?"
-
+  - text: "K\u0105 nor\u0117tum, kad patikslin\u010Diau?"
+  - text: "Jei gali apib\u016Bdink kas neai\u0161ku tiksliau."
+  - text: "Mielai patikslinsiu, tik primink k\u0105 nor\u0117tum, kad patikslin\u010D\
+      iau?"
   utter_not_understand_what:
-  - text: "Gal galėtum tiksliau aprašyt ko nesupranti? Mielai stengsiuosi atsakyti."
-# --------------------------------------------------------------------------------------------------------------
+  - text: "Gal gal\u0117tum tiksliau apra\u0161yt ko nesupranti? Mielai stengsiuosi\
+      \ atsakyti."
+  utter_default_fallback:
+  - text: "Atsipra\u0161au, nesu \u012Fsitikin\u0119s ar suprantu Tave, gal gali perfrazuoti\
+      \ savo klausim\u0105?"
+  utter_question_16_answer:
+  - text: "Baziniai duomen\u0173 tipai C# kalboje yra primityv\u016Bs tipai, kurie\
+      \ naudojami da\u017Eniausiai. Jie apima int, double, decimal, char, string ir\
+      \ bool."
+  utter_question_16_answer_more:
+  - text: "Baziniai duomen\u0173 tipai C# kalboje apima \u012Fvairius skaitmeninius\
+      \ ir neskaitytinius tipus, kurie naudojami duomen\u0173 saugojimui ir apdorojimui.\
+      \ \u0160ie tipai turi tam tikr\u0105 atminties kiek\u012F, numatytas reik\u0161\
+      mes ir reik\u0161mi\u0173 diapazonus: \n\nint: 32 bitai, sveikieji skai\u010D\
+      iai nuo -2,147,483,648 iki 2,147,483,647. \n\ndouble: 64 bitai, dvigubo tikslumo\
+      \ slankiojo kablelio skai\u010Diai. \n\ndecimal: 128 bitai, labai tiksl\u016B\
+      s de\u0161imtainiai skai\u010Diai. \n\nchar: 16 bit\u0173, Unicode simboliai.\
+      \ \n\nstring: simboli\u0173 eilut\u0117s. \n\nbool: 8 bitai, login\u0117s reik\u0161\
+      m\u0117s true arba false. "
+  utter_question_16_provide_example:
+  - text: "csharp \n\nusing System; \n\n \n\npublic class Program \n\n{{ \n\n    public\
+      \ static void Main() \n\n    {{ \n\n        int sk1 = 10; \n\n        double\
+      \ sk2 = 20.5; \n\n        decimal sk3 = 30.25m; \n\n        char simbolis =\
+      \ 'A'; \n\n        string tekstas = \"Hello, World!\"; \n\n        bool tiesa\
+      \ = true; \n\n \n\n        Console.WriteLine($\"int: {{sk1}}, double: {{sk2}}, decimal:\
+      \ {{sk3}}\"); \n\n        Console.WriteLine($\"char: {{simbolis}}, string: {{tekstas}},\
+      \ bool: {{tiesa}}\"); \n\n    }} \n\n}} "
+  utter_question_16_usage:
+  - text: "Baziniai duomen\u0173 tipai naudojami \u012Fvairiose C# programose nuo\
+      \ paprast\u0173 kintam\u0173j\u0173 apibr\u0117\u017Eimo iki sud\u0117tingesni\u0173\
+      \ duomen\u0173 strukt\u016Br\u0173 ir algoritm\u0173 k\u016Brimo."
+  utter_question_16_readmore:
+  - text: "Daugiau informacijos apie bazinius duomen\u0173 tipus galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapiuose 3-4."
+  utter_question_17_answer:
+  - text: "Konstantos C# kalboje apibr\u0117\u017Eiamos naudojant const rakta\u017E\
+      od\u012F ir j\u0173 reik\u0161m\u0117 negali b\u016Bti pakeista po pradinio\
+      \ apibr\u0117\u017Eimo."
+  utter_question_17_answer_more:
+  - text: "Konstantos C# kalboje yra fiksuotos reik\u0161m\u0117s, kurios negali b\u016B\
+      ti pakeistos programos vykdymo metu. Jos yra apibr\u0117\u017Eiamos naudojant\
+      \ const rakta\u017Eod\u012F prie\u0161 duomen\u0173 tipo deklaracij\u0105. Konstantos\
+      \ gali b\u016Bti \u012Fvairi\u0173 tip\u0173, toki\u0173 kaip skaitin\u0117\
+      s, simboli\u0173 arba eilut\u0117s."
+  utter_question_17_provide_example:
+  - text: "csharp \n\nusing System; \n\n \n\npublic class Program \n\n{{ \n\n    public\
+      \ const double Pi = 3.14159; \n\n    public const string Greeting = \"Hello,\
+      \ World!\"; \n\n     \n\n    public static void Main() \n\n    {{ \n\n      \
+      \  Console.WriteLine($\"Pi reik\u0161m\u0117: {{Pi}}\"); \n\n        Console.WriteLine(Greeting);\
+      \ \n\n    }} \n\n}} "
+  utter_question_17_usage:
+  - text: "Konstantos da\u017Enai naudojamos programoje, kai reikia naudoti pastovias\
+      \ reik\u0161mes, kurios netur\u0117t\u0173 keistis. Tai padeda u\u017Etikrinti,\
+      \ kad vert\u0117s nebus nety\u010Dia pakeistos, ir palengvina kodo skaitym\u0105\
+      \ bei prie\u017Ei\u016Br\u0105."
+  utter_question_17_readmore:
+  - text: Daugiau informacijos apie konstantas galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapyje 4
+  utter_question_22_answer:
+  - text: "Priskyrimo operacija C# kalboje naudojama reik\u0161m\u0117ms priskirti\
+      \ kintamiesiems."
+  utter_question_22_answer_more:
+  - text: "Priskyrimo operacija (=) C# kalboje naudojama, kai reikia priskirti tam\
+      \ tikr\u0105 reik\u0161m\u0119 kintamajam. Kai rei\u0161kinys yra apskai\u010D\
+      iuojamas, gauta reik\u0161m\u0117 yra priskiriama kintamajam, esan\u010Diam\
+      \ kair\u0117je priskyrimo operatoriaus pus\u0117je. Pavyzd\u017Eiui, int x =\
+      \ 5; priskiria reik\u0161m\u0119 5 kintamajam x."
+  utter_question_22_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n\n{{ \n    public static\
+      \ void Main() \n    {{ \n        int x; \n        x = 5; // Priskyrimo operacija\
+      \ \n\n        int y = x + 2; // Priskyrimo operacija su rei\u0161kiniu \n\n\
+      \        Console.WriteLine($\"x: {{x}}, y: {{y}}\"); \n    }}\n}}"
+  utter_question_22_usage:
+  - text: "Priskyrimo operacijos yra esmin\u0117 programavimo dalis, naudojama visose\
+      \ programose, kai reikia saugoti ir manipuliuoti duomenimis. Tai yra viena i\u0161\
+      \ pagrindini\u0173 operacij\u0173, kurias atlieka programuotojai."
+  utter_question_22_readmore:
+  - text: Daugiau informacijos apie priskyrimo operacijas galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapyje 10.
+  utter_question_18_answer:
+  - text: "Pagrindin\u0117s aritmetin\u0117s operacijos C# kalboje yra sud\u0117tis\
+      \ (+), atimtis (-), daugyba (*), dalyba (/) ir liekana (%)."
+  utter_question_18_answer_more:
+  - text: "Aritmetin\u0117s operacijos C# kalboje leid\u017Eia atlikti matematinius\
+      \ veiksmus su kintamaisiais ir konstantomis. \u0160ios operacijos apima: \n\n\
+      Sud\u0117tis (+): prideda du operandus. \n\nAtimtis (-): atima antr\u0105 operand\u0105\
+      \ i\u0161 pirmo. \n\nDaugyba (*): padaugina du operandus. \n\nDalyba (/): padalina\
+      \ pirm\u0105 operand\u0105 i\u0161 antro. Sveik\u0173j\u0173 skai\u010Di\u0173\
+      \ dalybos rezultatas taip pat yra sveikasis skai\u010Dius. \n\nLiekana (%):\
+      \ gr\u0105\u017Eina dalybos liekan\u0105 tarp dviej\u0173 operand\u0173. "
+  utter_question_18_provide_example:
+  - text: "csharp \n\nusing System; \n\n \n\npublic class Program \n\n{{ \n\n    public\
+      \ static void Main() \n\n    {{ \n\n        int a = 10; \n\n        int b = 3;\
+      \ \n\n         \n\n        Console.WriteLine($\"Sud\u0117tis: {{a}} + {{b}} = {{a\
+      \ + b}}\"); \n\n        Console.WriteLine($\"Atimtis: {{a}} - {{b}} = {{a - b}}\");\
+      \ \n\n        Console.WriteLine($\"Daugyba: {{a}} * {{b}} = {{a * b}}\"); \n\n   \
+      \     Console.WriteLine($\"Dalyba: {{a}} / {{b}} = {{a / b}}\"); \n\n        Console.WriteLine($\"\
+      Liekana: {{a}} % {{b}} = {{a % b}}\"); \n\n    }} \n\n}} "
+  utter_question_18_usage:
+  - text: "Aritmetin\u0117s operacijos naudojamos visur programose, kur reikia atlikti\
+      \ matematinius skai\u010Diavimus. Tai apima skai\u010Di\u0173 apdorojim\u0105\
+      , cikl\u0173 skai\u010Diavimus ir daugyb\u0119 kit\u0173 taikym\u0173."
+  utter_question_18_readmore:
+  - text: Daugiau informacijos apie aritmetines operacijas galite rasti dokumente
+      "117-2023-RD-T03-Pagrindiniai C# elementai" puslapyje 6.
+  utter_question_19_answer:
+  - text: "Sveik\u0173j\u0173 skai\u010Di\u0173 dalybos liekanos (%) operatorius gr\u0105\
+      \u017Eina liekan\u0105, likusi\u0105 padalinus du sveikuosius skai\u010Dius."
+  utter_question_19_answer_more:
+  - text: "Dalybos liekanos operatorius (%) naudojamas norint gauti dalybos liekan\u0105\
+      \ tarp dviej\u0173 sveik\u0173j\u0173 skai\u010Di\u0173. \u0160is operatorius\
+      \ veikia tiek su sveikaisiais, tiek su realiaisiais skai\u010Diais. Pvz., 11\
+      \ % 3 gr\u0105\u017Eins 2, nes 11 padalinus i\u0161 3 lieka 2."
+  utter_question_19_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int a = 11; \n        int b = 3; \n\n      \
+      \  Console.WriteLine($\"{{a}} % {{b}} = {{a % b}}\"); \n    }} \n}} "
+  utter_question_19_usage:
+  - text: "Dalybos liekanos operatorius naudojamas \u012Fvairiose programavimo u\u017E\
+      duotyse, pvz., norint patikrinti, ar skai\u010Dius yra lyginis arba nelyginis,\
+      \ arba cikl\u0173 iteracijose, kai reikia atlikti veiksmus kas n-t\u0105j\u012F\
+      \ iteracij\u0105."
+  utter_question_19_readmore:
+  - text: "Daugiau informacijos apie dalybos liekanos operatori\u0173 galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 6."
+  utter_question_21_answer:
+  - text: "Skliaustai naudojami C# kalboje, kad pakeist\u0173 operacij\u0173 vykdymo\
+      \ prioritet\u0105."
+  utter_question_21_answer_more:
+  - text: "C# kalboje skliaustai naudojami, kai norima pakeisti numatyt\u0105j\u0105\
+      \ operacij\u0173 vykdymo tvark\u0105. Skliaustai leid\u017Eia programuotojui\
+      \ nurodyti, kuri dalis rei\u0161kinio turi b\u016Bti atliekama pirmiausia, neatsi\u017E\
+      velgiant \u012F \u012Fprastus operacij\u0173 prioritetus. Pavyzd\u017Eiui, (a\
+      \ + b) * c u\u017Etikrina, kad sud\u0117tis bus atlikta pirmiau nei daugyba."
+  utter_question_21_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int a = 5; \n        int b = 2; \n        int\
+      \ c = 3; \n\n        int result = (a + b) * c; // Rezultatas bus 21, nes pirmiausia\
+      \ atliekama sud\u0117tis \n        Console.WriteLine($\"Rezultatas: {{result}}\"\
+      ); \n    }} \n}}"
+  utter_question_21_usage:
+  - text: "Skliaustai da\u017Enai naudojami sud\u0117tinguose matematiniuose skai\u010D\
+      iavimuose, kad u\u017Etikrint\u0173 teising\u0105 veiksm\u0173 sek\u0105. Jie\
+      \ taip pat padeda padaryti kod\u0105 ai\u0161kesn\u012F ir lengviau suprantam\u0105\
+      ."
+  utter_question_21_readmore:
+  - text: "Daugiau informacijos apie skliaustus ir j\u0173 naudojim\u0105 galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 8."
+  utter_question_23_answer:
+  - text: "Prefiksiniai ir pofiksiniai prieaugio (++) ir ma\u017E\u0117jimo (--) operatoriai\
+      \ C# kalboje naudojami kintam\u0173j\u0173 reik\u0161mei padidinti arba suma\u017E\
+      inti vienetu."
+  utter_question_23_answer_more:
+  - text: "C# kalboje prefiksiniai (++) ir pofiksiniai (++) operatoriai naudojami\
+      \ padidinti arba suma\u017Einti kintam\u0173j\u0173 reik\u0161m\u0119 vienetu.\
+      \ Prefiksinis operatorius (pvz., ++x) padidina arba suma\u017Eina reik\u0161\
+      m\u0119 prie\u0161 panaudojant kintam\u0105j\u012F rei\u0161kinyje, o pofiksinis\
+      \ operatorius (pvz., x++) padidina arba suma\u017Eina reik\u0161m\u0119 po kintamojo\
+      \ panaudojimo rei\u0161kinyje."
+  utter_question_23_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int x = 5; \n        Console.WriteLine($\"Prefiksinis:\
+      \ {{++x}}\"); // Padidina x prie\u0161 i\u0161vedant \n        Console.WriteLine($\"\
+      Pofiksinis: {{x++}}\"); // I\u0161veda x, tada padidina \n        Console.WriteLine($\"\
+      Galutin\u0117 reik\u0161m\u0117: {{x}}\"); \n    }} \n}}"
+  utter_question_23_usage:
+  - text: "\u0160ie operatoriai da\u017Enai naudojami cikl\u0173 iteracijose ir kituose\
+      \ veiksmuose, kur reikia da\u017Enai padidinti arba suma\u017Einti kintam\u0105\
+      j\u012F. Jie taip pat padeda optimizuoti ir sutrumpinti kod\u0105."
+  utter_question_23_readmore:
+  - text: Daugiau informacijos apie prefiksinius ir pofiksinius operatorius galite
+      rasti dokumente "117-2023-RD-T03-Pagrindiniai C# elementai" puslapyje 11
+  utter_question_25_answer:
+  - text: "Pagrindiniai s\u0105lygos operatoriai C# kalboje yra ==, !=, <, >, <=,\
+      \ >=."
+  utter_question_25_answer_more:
+  - text: "C# kalboje yra keletas s\u0105lygos operatori\u0173, kurie naudojami palyginimo\
+      \ operacijoms: \n\n==: patikrina, ar dvi reik\u0161m\u0117s yra lygios. \n\n\
+      !=: patikrina, ar dvi reik\u0161m\u0117s n\u0117ra lygios. \n\n<: patikrina,\
+      \ ar viena reik\u0161m\u0117 yra ma\u017Eesn\u0117 u\u017E kit\u0105. \n\n>:\
+      \ patikrina, ar viena reik\u0161m\u0117 yra didesn\u0117 u\u017E kit\u0105.\
+      \ \n\n<=: patikrina, ar viena reik\u0161m\u0117 yra ma\u017Eesn\u0117 arba lygi\
+      \ kitai. \n\n>=: patikrina, ar viena reik\u0161m\u0117 yra didesn\u0117 arba\
+      \ lygi kitai. "
+  utter_question_25_provide_example:
+  - text: "csharp\n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int x = 5; \n        int y = 10; \n\n      \
+      \  if (x < y) \n        {{ \n            Console.WriteLine($\"{{x}} yra ma\u017E\
+      iau nei {{y}}\"); \n        }} \n    }} \n}} "
+  utter_question_25_usage:
+  - text: "S\u0105lygos operatoriai naudojami if s\u0105lygose, cikluose ir kituose\
+      \ valdymo sraut\u0173 sakiniuose, kur reikia priimti sprendimus pagal tam tikras\
+      \ s\u0105lygas."
+  utter_question_25_readmore:
+  - text: "Daugiau informacijos apie s\u0105lygos operatorius galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 14."
+  utter_question_26_answer:
+  - text: "Loginis kintamasis C# kalboje apra\u0161omas naudojant bool tip\u0105,\
+      \ jo reik\u0161m\u0117s gali b\u016Bti true arba false."
+  utter_question_26_answer_more:
+  - text: "Loginis kintamasis C# kalboje apra\u0161omas naudojant bool tip\u0105,\
+      \ jo reik\u0161m\u0117s gali b\u016Bti true arba false."
+  utter_question_26_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{\n    public static\
+      \ void Main() \n    {{\n        bool isRaining = true;\n        if (isRaining)\n\
+      \        {{\n            Console.WriteLine(\"Pasiimk sk\u0117t\u012F!\");\n \
+      \       }}\n    }}\n}}"
+  utter_question_26_usage:
+  - text: "Loginiai kintamieji da\u017Enai naudojami s\u0105lyg\u0173 tikrinimo sakiniuose,\
+      \ cikluose ir valdymo sraut\u0173 kontrol\u0117je. Jie padeda programuotojams\
+      \ priimti sprendimus pagal logines s\u0105lygas programos vykdymo metu."
+  utter_question_26_readmore:
+  - text: Daugiau informacijos apie loginius kintamuosius galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapyje 15.
+  utter_question_34_answer:
+  - text: "Ciklo sakinys while C# kalboje kartoja kod\u0105, kol tam tikra s\u0105\
+      lyga yra tenkinama. "
+  utter_question_34_answer_more:
+  - text: "Ciklo sakinys while C# kalboje naudojamas vykdyti tam tikr\u0105 kod\u0105\
+      \ tol, kol s\u0105lyga yra true. While ciklas tikrina s\u0105lyg\u0105 prie\u0161\
+      \ kiekvien\u0105 iteracij\u0105 ir, jei s\u0105lyga yra true, vykdo ciklo k\u016B\
+      n\u0105. Pvz., while (x < 10) {{ ... }} vykdys kod\u0105 tol, kol x bus ma\u017E\
+      iau nei 10."
+  utter_question_34_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        int x = 0;\n        while (x < 5)\n        {{\n    \
+      \        Console.WriteLine($\"x: {{x}}\");\n            x++;\n        }}\n    }}\n\
+      }}"
+  utter_question_34_usage:
+  - text: "Ciklo sakinys while C# kalboje naudojamas vykdyti tam tikr\u0105 kod\u0105\
+      \ tol, kol s\u0105lyga yra true. While ciklas tikrina s\u0105lyg\u0105 prie\u0161\
+      \ kiekvien\u0105 iteracij\u0105 ir, jei s\u0105lyga yra true, vykdo ciklo k\u016B\
+      n\u0105. Pvz., while (x < 10) {{ ... }} vykdys kod\u0105 tol, kol x bus ma\u017E\
+      iau nei 10."
+  utter_question_34_readmore:
+  - text: "Daugiau informacijos apie while cikl\u0105 galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai\
+      \ C# elementai\" puslapyje 46."
+  utter_question_36_answer:
+  - text: "Ciklo sakinys foreach C# kalboje naudojamas iteruoti per kolekcijas, pvz.,\
+      \ masyvus arba s\u0105ra\u0161us."
+  utter_question_36_answer_more:
+  - text: "Foreach ciklas C# kalboje naudojamas iteruoti per kiekvien\u0105 kolekcijos\
+      \ element\u0105. Jis u\u017Etikrina, kad kiekvienas elementas bus apdorotas\
+      \ be rankinio indeksavimo. Pvz., foreach (var item in collection) {{ ... }} apdoros\
+      \ kiekvien\u0105 collection element\u0105."
+  utter_question_36_provide_example:
+  - text: "csharp\n\nusing System;\nusing System.Collections.Generic;\n\npublic class\
+      \ Program\n{{\n    public static void Main()\n    {{\n        List<string> fruits\
+      \ = new List<string> {{ \"Apple\", \"Banana\", \"Cherry\" }};\n        foreach\
+      \ (string fruit in fruits)\n        {{\n            Console.WriteLine(fruit);\n\
+      \        }}\n    }}\n}}"
+  utter_question_36_usage:
+  - text: "Foreach ciklai naudojami, kai reikia iteruoti per visus kolekcijos elementus,\
+      \ pvz., masyvus, s\u0105ra\u0161us ar kitus duomen\u0173 tipus, palaikan\u010D\
+      ius IEnumerable s\u0105saj\u0105."
+  utter_question_36_readmore:
+  - text: "Daugiau informacijos apie foreach cikl\u0105 galite rasti dokumente \"\
+      117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 49."
+  utter_question_24_answer:
+  - text: "Loginiai rei\u0161kiniai C# kalboje yra s\u0105lygos, kurios gali \u012F\
+      gauti dvi reik\u0161mes: true arba false."
+  utter_question_24_answer_more:
+  - text: "Loginiai rei\u0161kiniai yra s\u0105lygos, kuri\u0173 rezultatas yra login\u0117\
+      \ reik\u0161m\u0117 - true arba false. Jie naudojami sprendim\u0173 pri\u0117\
+      mimui programoje. Loginiai rei\u0161kiniai gali apimti palyginimo operatorius\
+      \ (pvz., ==, !=, <, >) ir loginius operatorius (pvz., &&, ||, !). Pvz., x >\
+      \ 10 && y < 5 yra loginis rei\u0161kinys, kurio rezultatas bus true arba false\
+      \ priklausomai nuo x ir y reik\u0161mi\u0173."
+  utter_question_24_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int a = 5; \n        int b = 10; \n\n      \
+      \  bool result = (a < b) && (a > 0); // Loginis rei\u0161kinys \n        Console.WriteLine($\"\
+      Rezultatas: {{result}}\"); \n    }} \n}}"
+  utter_question_24_usage:
+  - text: "Loginiai rei\u0161kiniai naudojami if s\u0105lygose, cikluose ir kitose\
+      \ vietose, kur reikia priimti sprendimus pagal s\u0105lygas. Jie yra esminiai\
+      \ sprendim\u0173 pri\u0117mimo ir kontrol\u0117s sraut\u0173 valdymo elementai\
+      \ programoje."
+  utter_question_24_readmore:
+  - text: "Daugiau informacijos apie loginius rei\u0161kinius galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 12."
+  utter_question_27_answer:
+  - text: "Pagrindiniai s\u0105lygos operatoriai C# kalboje yra ==, !=, <, >, <=,\
+      \ >=."
+  utter_question_27_answer_more:
+  - text: "C# kalboje yra keletas s\u0105lygos operatori\u0173, kurie naudojami palyginimo\
+      \ operacijoms: \n==: patikrina, ar dvi reik\u0161m\u0117s yra lygios. \n!=:\
+      \ patikrina, ar dvi reik\u0161m\u0117s n\u0117ra lygios. \n<: patikrina, ar\
+      \ viena reik\u0161m\u0117 yra ma\u017Eesn\u0117 u\u017E kit\u0105. \n>: patikrina,\
+      \ ar viena reik\u0161m\u0117 yra didesn\u0117 u\u017E kit\u0105. \n<=: patikrina,\
+      \ ar viena reik\u0161m\u0117 yra ma\u017Eesn\u0117 arba lygi kitai. \n>=: patikrina,\
+      \ ar viena reik\u0161m\u0117 yra didesn\u0117 arba lygi kitai. "
+  utter_question_27_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int x = 5; \n        int y = 10; \n\n      \
+      \  if (x < y) \n        {{ \n            Console.WriteLine($\"{{x}} yra ma\u017E\
+      iau nei {{y}}\"); \n        }} \n    }} \n}}"
+  utter_question_27_usage:
+  - text: "S\u0105lygos operatoriai naudojami if s\u0105lygose, cikluose ir kituose\
+      \ valdymo sraut\u0173 sakiniuose, kur reikia priimti sprendimus pagal tam tikras\
+      \ s\u0105lygas."
+  utter_question_27_readmore:
+  - text: "Daugiau informacijos apie s\u0105lygos operatorius galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 14."
+  utter_question_28_answer:
+  - text: "Loginis kintamasis C# kalboje apra\u0161omas naudojant bool tip\u0105,\
+      \ jo reik\u0161m\u0117s gali b\u016Bti true arba false."
+  utter_question_28_answer_more:
+  - text: "Loginis kintamasis C# kalboje naudojamas login\u0117ms reik\u0161m\u0117\
+      ms saugoti. Jis apra\u0161omas naudojant bool duomen\u0173 tip\u0105. Loginio\
+      \ kintamojo reik\u0161m\u0117 gali b\u016Bti true (teisinga) arba false (neteisinga).\
+      \ Pavyzd\u017Eiui, bool isRaining = true; apra\u0161o login\u012F kintam\u0105\
+      j\u012F, kurio reik\u0161m\u0117 yra true."
+  utter_question_28_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        bool isRaining = true; \n        if (isRaining)\
+      \ \n        {{ \n            Console.WriteLine(\"Pasiimk sk\u0117t\u012F!\");\
+      \ \n        }} \n    }} \n}} "
+  utter_question_28_usage:
+  - text: "Loginiai kintamieji da\u017Enai naudojami s\u0105lyg\u0173 tikrinimo sakiniuose,\
+      \ cikluose ir valdymo sraut\u0173 kontrol\u0117je. Jie padeda programuotojams\
+      \ priimti sprendimus pagal logines s\u0105lygas programos vykdymo metu."
+  utter_question_28_readmore:
+  - text: Daugiau informacijos apie loginius kintamuosius galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapyje 15.
+  utter_question_29_answer:
+  - text: "Login\u0117s operacijos C# kalboje yra s\u0105lygin\u0117 daugyba (&&),\
+      \ s\u0105lygin\u0117 sud\u0117tis (||) ir loginis neigimas (!)."
+  utter_question_29_answer_more:
+  - text: "Login\u0117s operacijos C# kalboje naudojamos login\u0117ms reik\u0161\
+      m\u0117ms manipuliuoti ir tikrinti s\u0105lyg\u0173 teisingum\u0105. Pagrindin\u0117\
+      s login\u0117s operacijos yra: \n\n&&: s\u0105lygin\u0117 daugyba (ir) \u2013\
+      \ abu operandai turi b\u016Bti true, kad rezultatas b\u016Bt\u0173 true. \n\n\
+      ||: s\u0105lygin\u0117 sud\u0117tis (arba) \u2013 bent vienas operandas turi\
+      \ b\u016Bti true, kad rezultatas b\u016Bt\u0173 true. \n\n!: loginis neigimas\
+      \ (ne) \u2013 kei\u010Dia login\u0119 reik\u0161m\u0119 \u012F prie\u0161ing\u0105\
+      \ (true \u012F false ir atvirk\u0161\u010Diai). "
+  utter_question_29_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        bool isSunny = true; \n        bool isWarm =\
+      \ false; \n\n        if (isSunny && isWarm) \n        {{ \n            Console.WriteLine(\"\
+      Puikus oras i\u0161eiti \u012F lauk\u0105!\"); \n        }} \n        else if\
+      \ (isSunny || isWarm) \n        {{ \n            Console.WriteLine(\"Galima i\u0161\
+      eiti \u012F lauk\u0105, bet pasitikrink or\u0105.\"); \n        }} \n       \
+      \ else \n        {{ \n            Console.WriteLine(\"Geriau likti namuose.\"\
+      ); \n        }} \n        // Loginis neigimas \n        bool isRaining = !isSunny;\
+      \ \n        Console.WriteLine($\"Ar lyja? {{isRaining}}\"); \n    }} \n}} "
+  utter_question_29_usage:
+  - text: "Login\u0117s operacijos naudojamos s\u0105lyg\u0173 tikrinimui if sakiniuose,\
+      \ cikluose ir kitose valdymo strukt\u016Brose, kur reikia patikrinti keli\u0173\
+      \ s\u0105lyg\u0173 kombinacij\u0105 arba neigti s\u0105lygos reik\u0161m\u0119\
+      ."
+  utter_question_29_readmore:
+  - text: Daugiau informacijos apie logines operacijas galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapiuose 16-17.
+  utter_question_31_answer:
+  - text: "Login\u0117 operacija XOR (^) C# kalboje gr\u0105\u017Eina true, kai tik\
+      \ vienas i\u0161 operand\u0173 yra true."
+  utter_question_31_answer_more:
+  - text: "Login\u0117 operacija XOR (^) (skaitmenin\u0117 sud\u0117tis moduliu 2)\
+      \ C# kalboje naudojama, kai reikia patikrinti, ar tik vienas i\u0161 dviej\u0173\
+      \ operand\u0173 yra true. Jei abu operandai yra vienodi (abu true arba abu false),\
+      \ rezultatas yra false. Jei operandai skirtingi (vienas true, kitas false),\
+      \ rezultatas yra true."
+  utter_question_31_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        bool a = true;\n        bool b = false;\n        bool\
+      \ result = a ^ b; // XOR operacija\n        Console.WriteLine($\"Rezultatas:\
+      \ {{result}}\");\n    }}\n}}"
+  utter_question_31_usage:
+  - text: "Login\u0117 operacija XOR naudojama situacijose, kur reikia tik vieno i\u0161\
+      \ dviej\u0173 s\u0105lyg\u0173 teisingumo, bet ne abiej\u0173 vienu metu. Tai\
+      \ naudinga, kai reikia tiksliai tik vienos s\u0105lygos teisingumo."
+  utter_question_31_readmore:
+  - text: "Daugiau informacijos apie login\u0119 operacij\u0105 XOR galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 20."
+  utter_question_32_answer:
+  - text: "Login\u0117s operacijos s\u0105lygos tikrinimo sakiniuose C# kalboje naudojamos\
+      \ if, while, for cikluose ir kituose kontrol\u0117s sraut\u0173 sakiniuose."
+  utter_question_32_answer_more:
+  - text: "Login\u0117s operacijos C# kalboje naudojamos s\u0105lygos tikrinimo sakiniuose,\
+      \ tokiose kaip if, while ir for. Jos leid\u017Eia patikrinti s\u0105lygas ir\
+      \ vykdyti atitinkamus veiksmus, kai s\u0105lygos yra tenkinamos arba ne. Pavyzd\u017E\
+      iui, if sakinys tikrina s\u0105lyg\u0105 ir vykdo kod\u0105, jei s\u0105lyga\
+      \ yra true."
+  utter_question_32_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int age = 20; \n        bool hasID = true; \n\
+      \n        if (age >= 18 && hasID) \n        {{ \n            Console.WriteLine(\"\
+      J\u016Bs galite \u012Feiti.\"); \n        }} \n        else \n        {{\n   \
+      \         Console.WriteLine(\"J\u016Bs negalite \u012Feiti.\"); \n        }}\n\
+      \        while (age < 25) \n        {{ \n            Console.WriteLine($\"J\u016B\
+      s vis dar jaunas: {{age}}\"); \n            age++; \n        }} \n        for (int\
+      \ i = 0; i < 5; i++)\n        {{\n            Console.WriteLine($\"Iteracija:\
+      \ {{i}}\"); \n        }}\n    }}\n}}"
+  utter_question_32_usage:
+  - text: "Login\u0117s operacijos naudojamos valdymo sraut\u0173 kontrol\u0117je,\
+      \ kur reikia priimti sprendimus pagal tam tikras s\u0105lygas. Tai leid\u017E\
+      ia programuotojams kurti lankst\u0173 ir dinami\u0161k\u0105 kod\u0105, kuris\
+      \ reaguoja \u012F \u012Fvairias s\u0105lygas vykdymo metu."
+  utter_question_32_readmore:
+  - text: "Daugiau informacijos apie logini\u0173 operacij\u0173 naudojim\u0105 s\u0105\
+      lygos tikrinimo sakiniuose galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai\
+      \ C# elementai\" puslapiuose 23-24."
+  utter_question_33_answer:
+  - text: "S\u0105lygos tikrinimo sakiniai if C# kalboje naudojami vykdyti kod\u0105\
+      , kai tam tikra s\u0105lyga yra tenkinama."
+  utter_question_33_answer_more:
+  - text: "C# kalboje if sakiniai naudojami tikrinti s\u0105lyg\u0105 ir vykdyti tam\
+      \ tikr\u0105 kod\u0105, jei s\u0105lyga yra true. If sakinys gali b\u016Bti\
+      \ i\u0161pl\u0117stas naudojant else ir else if dalis, kurios vykdomos, jei\
+      \ pradin\u0117 s\u0105lyga n\u0117ra tenkinama. Pavyzd\u017Eiui, if (x > 0)\
+      \ {{ ... }} else {{ ... }} tikrina, ar x yra didesnis u\u017E 0 ir vykdo atitinkam\u0105\
+      \ kod\u0105."
+  utter_question_33_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int x = 10; \n        if (x > 0) \n        {{\
+      \ \n            Console.WriteLine(\"x yra teigiamas\"); \n        }} \n     \
+      \   else if (x < 0) \n        {{ \n            Console.WriteLine(\"x yra neigiamas\"\
+      ); \n        }} \n        else \n        {{ \n            Console.WriteLine(\"\
+      x yra nulis\"); \n        }} \n    }} \n}} "
+  utter_question_33_usage:
+  - text: "If sakiniai naudojami kontrol\u0117s srauto valdymui programoje, leid\u017E\
+      iant priimti sprendimus ir atlikti skirtingus veiksmus pagal skirtingas s\u0105\
+      lygas. "
+  utter_question_33_readmore:
+  - text: Daugiau informacijos apie if sakinius galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapiuose 31-33.
+  utter_question_35_answer:
+  - text: "Ciklo sakinys for C# kalboje naudojamas vykdyti kod\u0105 nustatyt\u0105\
+      \ skai\u010Di\u0173 kart\u0173, kai \u017Einomas iteracij\u0173 skai\u010Dius."
+  utter_question_35_answer_more:
+  - text: "Ciklo sakinys for C# kalboje turi tris dalis: pradin\u0117s reik\u0161\
+      m\u0117s priskyrim\u0105, s\u0105lygos tikrinim\u0105 ir iteracijos veiksm\u0105\
+      . Jis kartoja kod\u0105 tol, kol s\u0105lyga yra tenkinama. Pvz., for (int i\
+      \ = 0; i < 10; i++) {{ ... }} vykdys kod\u0105 10 kart\u0173, nuo 0 iki 9."
+  utter_question_35_provide_example:
+  - text: 'csharp;
 
-# Kas yra objektinis programavimas? ----------------------------------------------------------------------------
-  utter_question_1_answer:
-  - text: "Tai programavimo paradigma, kuri paremta objekto sąvoka."
+      using System;
 
-  utter_question_1_answer_more:
-  - text: "Pasistengsiu patikslinti. Objektinis programavimas (OP) yra programavimo paradigma, kurioje programos yra struktūrizuojamos kaip objektai, kurie yra duomenų struktūros, kuriantys vieną kitą ir bendraujantys vienas su kitu. Kiekvienas objektas gali turėti savo savybes (duomenis) ir veiksmus (metodus ar funkcijas), kurie gali manipuliuoti šiais duomenimis."
+      public class Program
 
-  utter_question_1_provide_example:
-  - text: "Objektinio programavimo panaudojimo pavyzdys:"
+      {{
 
-  utter_question_1_usage:
-  - text: "Objektinio programavimo panaudojimas:"
+      public static void Main()
 
-  utter_question_1_readmore:
-  - text: "Informacijos apie objektinį programavimą gali rasti T1 3/39 skaidrėje"
-# --------------------------------------------------------------------------------------------------------------
+      {{
 
-# Kas yra objektas? --------------------------------------------------------------------------------------------
-  utter_question_2_answer:
-  - text: "Objektas – tai darinys, kurį sudaro duomenys (laukai) ir jų apdorojimo funkcijos (metodai)."
+      for (int i = 0; i < 5; i++)
 
-  utter_question_2_answer_more:
-  - text: "Bandau patikslinti. Objektas objektiniame programavime yra pagrindinė programavimo struktūra, turinti savybes ir metodus. Jis atspindi realaus pasaulio sąvokas arba abstrakcijas, kurios yra svarbios programos kontekste. Objektas susideda iš duomenų (vadinamų objekto savybėmis arba būsenomis) ir metodų (vadinamų veiksmais arba funkcijomis), kurie gali manipuliuoti šiais duomenimis."
+      {{
 
-  utter_question_2_provide_example:
-  - text: "Objekto panaudojimo pavyzdys:"
+      Console.WriteLine($"Iteracija: {{i}}");
 
-  utter_question_2_usage:
-  - text: "Objekto panaudojimas:"
+      }}
 
-  utter_question_2_readmore:
-  - text: "Informacijos apie objekto sąvoką gali rasti T1 3/39 skaidrėje"
-# --------------------------------------------------------------------------------------------------------------
+      }}
 
+      }}'
+  utter_question_35_usage:
+  - text: "For ciklai naudojami, kai reikia vykdyti kod\u0105 nustatyt\u0105 skai\u010D\
+      i\u0173 kart\u0173. Tai da\u017Enai naudojama iteruojant per masyvus arba atliekant\
+      \ veiksmus, kai \u017Einomas tikslus iteracij\u0173 skai\u010Dius."
+  utter_question_35_readmore:
+  - text: "Daugiau informacijos apie for cikl\u0105 galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai\
+      \ C# elementai\" puslapyje 47."
+  utter_question_38_answer:
+  - text: "Duomen\u0173 \u012Fvestis atliekama naudojant Console.ReadLine(), o i\u0161\
+      vestis \u2013 naudojant Console.WriteLine() metodus."
+  utter_question_38_answer_more:
+  - text: "C# kalboje duomen\u0173 \u012Fvestis ir i\u0161vestis atliekama naudojant\
+      \ Console klas\u0119. \u012Evestis i\u0161 vartotojo gaunama naudojant Console.ReadLine()\
+      \ metod\u0105, kuris nuskaito vis\u0105 eilut\u0119 teksto. \u0160\u012F tekst\u0105\
+      \ galima konvertuoti \u012F kitus duomen\u0173 tipus, pvz., int arba double.\
+      \ I\u0161vestis \u012F konsol\u0119 atliekama naudojant Console.WriteLine()\
+      \ metod\u0105, kuris i\u0161veda tekst\u0105 ir prideda nauj\u0105 eilut\u0119\
+      . Console.Write() metodas i\u0161veda tekst\u0105 be naujos eilut\u0117s."
+  utter_question_38_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        Console.WriteLine(\"\u012Eveskite savo vard\u0105:\"\
+      );\n        string vardas = Console.ReadLine();\n\n        Console.WriteLine(\"\
+      \u012Eveskite savo am\u017Ei\u0173:\");\n        int amzius = int.Parse(Console.ReadLine());\n\
+      \n        Console.WriteLine($\"Sveiki, {{vardas}}! J\u016Bs\u0173 am\u017Eius\
+      \ yra {{amzius}} metai.\");\n    }}\n}}"
+  utter_question_38_usage:
+  - text: "Duomen\u0173 \u012Fvestis ir i\u0161vestis naudojama programose, kuriose\
+      \ reikia s\u0105veikauti su vartotoju, pvz., \u012Fvesti duomenis, rodyti rezultatus\
+      \ arba pateikti informacij\u0105 apie klaidas."
+  utter_question_38_readmore:
+  - text: "Daugiau informacijos apie duomen\u0173 \u012Fvest\u012F ir i\u0161vest\u012F\
+      \ galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapiuose\
+      \ 53-56."
+  utter_question_39_answer:
+  - text: "Daug reik\u0161mi\u0173 \u012Fvedimas vienoje eilut\u0117je atliekamas\
+      \ naudojant Console.ReadLine() metod\u0105 ir Split() metod\u0105 reik\u0161\
+      m\u0117ms atskirti."
+  utter_question_39_answer_more:
+  - text: "C# kalboje galima \u012Fvesti kelias reik\u0161mes vienoje eilut\u0117\
+      je ir jas atskirti naudojant Console.ReadLine() metod\u0105, kuris nuskaito\
+      \ vis\u0105 eilut\u0119 teksto. \u0160i eilut\u0117 tada gali b\u016Bti padalinta\
+      \ \u012F atskiras reik\u0161mes naudojant Split() metod\u0105. Kiekviena reik\u0161\
+      m\u0117 gali b\u016Bti konvertuota \u012F atitinkam\u0105 duomen\u0173 tip\u0105\
+      \ naudojant Convert metodus, pvz., Convert.ToInt32() arba Convert.ToDouble()."
+  utter_question_39_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        Console.WriteLine(\"\u012Eveskite sveik\u0105j\u012F\
+      , real\u0173j\u012F, de\u0161imtain\u012F, simbol\u012F, eilut\u0119 visus vienoje\
+      \ eilut\u0117je:\");\n        string eilute = Console.ReadLine();\n        string[]\
+      \ dalys = eilute.Split(' ');\n\n        int sveikasis = Convert.ToInt32(dalys[0]);\n\
+      \        double realusis = Convert.ToDouble(dalys[1]);\n        decimal desimtainis\
+      \ = Convert.ToDecimal(dalys[2]);\n        char simbolis = Convert.ToChar(dalys[3]);\n\
+      \        string eilute2 = dalys[4];\n\n        Console.WriteLine($\"Sveikasis:\
+      \ {{sveikasis}}, Realusis: {{realusis}}, De\u0161imtainis: {{desimtainis}}, Simbolis:\
+      \ {{simbolis}}, Eilut\u0117: {{eilute2}}\");\n    }}\n}}"
+  utter_question_39_usage:
+  - text: "\u0160is metodas naudingas, kai reikia \u012Fvesti kelias susijusias reik\u0161\
+      mes vienu metu, pvz., koordinates arba kelis parametrus. Tai leid\u017Eia supaprastinti\
+      \ duomen\u0173 \u012Fvedim\u0105 ir padidinti programos efektyvum\u0105."
+  utter_question_39_readmore:
+  - text: "Daugiau informacijos apie daug reik\u0161mi\u0173 \u012Fvedim\u0105 vienoje\
+      \ eilut\u0117je galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\"\
+      \ puslapyje 57."
+  utter_question_40_answer:
+  - text: "I\u0161vestis formatuojama naudojant formatavimo specifikatorius {{0}}, {{1}}\
+      \ ir pan., kartu su Console.WriteLine() metodu."
+  utter_question_40_answer_more:
+  - text: "Console.WriteLine() metodas leid\u017Eia formatuoti i\u0161vest\u012F naudojant\
+      \ vietos rezervavimo simbolius ({{0}}, {{1}}, ...) ir formatavimo specifikatorius.\
+      \ Pavyzd\u017Eiui, {{0:C}} formatuoja skai\u010Di\u0173 kaip valiut\u0105. Tai\
+      \ leid\u017Eia programuotojams tiksliai kontroliuoti, kaip duomenys bus rodomi\
+      \ konsol\u0117je, pvz., nurodant skai\u010Di\u0173 su dviem de\u0161imtain\u0117\
+      mis vietomis arba i\u0161lygiuojant tekst\u0105."
+  utter_question_40_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        int sk1 = 123;\n        double sk2 = 45.678;\n    \
+      \    decimal sk3 = 789.01m\n\n        Console.WriteLine(\"Skai\u010Dius: {{0:D}},\
+      \ Reali reik\u0161m\u0117: {{1:F2}}, Valiuta: {{2:C}}\", sk1, sk2, sk3);\n    }}\n\
+      }}"
+  utter_question_40_usage:
+  - text: "Formatavimas naudojamas norint i\u0161vesti duomenis tam tikru b\u016B\
+      du, pvz., finansin\u0117se ataskaitose arba statistiniuose duomenyse, kad b\u016B\
+      t\u0173 lengviau skaityti ir suprasti informacij\u0105."
+  utter_question_40_readmore:
+  - text: "Daugiau informacijos apie i\u0161vesties formatavim\u0105 galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 58."
+  utter_question_41_answer:
+  - text: "Klas\u0117 C# kalboje sukuriama naudojant class rakta\u017Eod\u012F, po\
+      \ kurio seka klas\u0117s pavadinimas ir k\u016Bno apibr\u0117\u017Eimas."
+  utter_question_41_answer_more:
+  - text: "C# kalboje klas\u0117 sukuriama naudojant class rakta\u017Eod\u012F, po\
+      \ kurio seka klas\u0117s pavadinimas ir fig\u016Briniai skliaustai, kuriuose\
+      \ apibr\u0117\u017Eiami klas\u0117s nariai \u2013 laukeliai, savyb\u0117s ir\
+      \ metodai. Klas\u0117s nariai gali b\u016Bti public (vie\u0161ieji) arba private\
+      \ (privatieji), priklausomai nuo to, ar jie tur\u0117t\u0173 b\u016Bti pasiekiami\
+      \ i\u0161 i\u0161or\u0117s."
+  utter_question_41_provide_example:
+  - text: "csharp\n\npublic class Automobilis\n{{\n    public string Marke {{ get; set;\
+      \ }}\n    public string Modelis {{ get; set; }}\n    public int Metai {{ get; set;\
+      \ }}\n\n    public void SpausdintiInfo() \n    {{\n        Console.WriteLine($\"\
+      Automobilis: {{Marke}} {{Modelis}}, Metai: {{Metai}}\");\n    }}\n}}\n\npublic class\
+      \ Program\n{{\n    public static void Main() \n    {{\n        Automobilis auto\
+      \ = new Automobilis\n        {{\n            Marke = \"Toyota\",\n          \
+      \  Modelis = \"Corolla\",\n            Metai = 2020\n        }};\n\n        auto.SpausdintiInfo();\
+      \ \n    }}\n}}"
+  utter_question_41_usage:
+  - text: "Klas\u0117s naudojamos objektinio programavimo paradigmose, siekiant sukurti\
+      \ objektais pagr\u012Fstas programas. Jos leid\u017Eia strukt\u016Brizuoti kod\u0105\
+      \ ir geriau valdyti sud\u0117tingum\u0105, susiejant duomenis ir elgsen\u0105\
+      \ \u012F vien\u0105 vienet\u0105."
+  utter_question_41_readmore:
+  - text: "Daugiau informacijos apie klas\u0117s suk\u016Brim\u0105 galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 61."
+  utter_question_42_answer:
+  - text: "Klas\u0117s element\u0173 matomumas C# kalboje nustatomas naudojant public,\
+      \ private ir kitus modifikatorius, kurie apibr\u0117\u017Eia, ar klas\u0117\
+      s nariai yra prieinami i\u0161 i\u0161or\u0117s."
+  utter_question_42_answer_more:
+  - text: "C# kalboje klas\u0117s element\u0173 matomumas nurodo, ar klas\u0117s nariai\
+      \ (laukai, savyb\u0117s, metodai) yra prieinami u\u017E klas\u0117s rib\u0173\
+      . public modifikatorius leid\u017Eia prieig\u0105 prie klas\u0117s nari\u0173\
+      \ i\u0161 i\u0161or\u0117s, o private modifikatorius leid\u017Eia prieig\u0105\
+      \ tik pa\u010Dios klas\u0117s viduje. Taip pat yra ir kit\u0173 modifikatori\u0173\
+      , toki\u0173 kaip protected, internal ir protected internal, kurie suteikia\
+      \ papildom\u0173 matomumo valdymo galimybi\u0173."
+  utter_question_42_provide_example:
+  - text: "csharp\n\npublic class BankoSaskaita\n{{\n    private decimal balansas;\n\
+      \n    public void Indelis(decimal suma)\n    {{\n        balansas += suma;\n\
+      \    }}\n\n    public void Isigryninimas(decimal suma)\n    {{\n        if (suma\
+      \ <= balansas)\n        {{\n            balansas -= suma;\n        }}\n      \
+      \  else\n        {{\n            Console.WriteLine(\"Nepakanka l\u0117\u0161\u0173\
+      .\"); \n        }}\n    }}\n\n    public decimal GautiBalansa()\n    {{\n     \
+      \   return balansas;\n    }}\n}}\n\npublic class Program\n{{\n    public static\
+      \ void Main()\n    {{\n        BankoSaskaita saskaita = new BankoSaskaita();\n\
+      \        saskaita.Indelis(100);\n        saskaita.Isigryninimas(50);\n     \
+      \   Console.WriteLine($\"S\u0105skaitos balansas: {{saskaita.GautiBalansa()}}\"\
+      );\n    }}\n}}"
+  utter_question_42_usage:
+  - text: "Matomumo modifikatoriai naudojami inkapsuliacijai valdyti, u\u017Etikrinant,\
+      \ kad tik reikalingi klas\u0117s nariai b\u016Bt\u0173 prieinami i\u0161 i\u0161\
+      or\u0117s, taip suma\u017Einant klaid\u0173 tikimyb\u0119 ir didinant kodo saugum\u0105\
+      \ bei tvark\u0105."
+  utter_question_42_readmore:
+  - text: "Daugiau informacijos apie klas\u0117s element\u0173 matomum\u0105 galite\
+      \ rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapiuose\
+      \ 62-63."
+  utter_question_43_answer:
+  - text: "private po\u017Eymis leid\u017Eia prieig\u0105 prie klas\u0117s nari\u0173\
+      \ tik pa\u010Dios klas\u0117s viduje, o public po\u017Eymis leid\u017Eia prieig\u0105\
+      \ prie klas\u0117s nari\u0173 i\u0161 i\u0161or\u0117s."
+  utter_question_43_answer_more:
+  - text: "C# kalboje private po\u017Eymis nurodo, kad klas\u0117s narys (laukai,\
+      \ savyb\u0117s, metodai) yra prieinamas tik pa\u010Dios klas\u0117s viduje.\
+      \ Tai numatytasis matomumo lygis, jei nenurodytas joks modifikatorius. public\
+      \ po\u017Eymis leid\u017Eia klas\u0117s nariams b\u016Bti prieinamiems i\u0161\
+      \ i\u0161or\u0117s, taip leid\u017Eiant kitiems kodams naudotis \u0161iais nariais."
+  utter_question_43_provide_example:
+  - text: "csharp \n\npublic class Preke \n{{\n    private string pavadinimas;\n  \
+      \  private decimal kaina;\n\n    public void NustatytiKaina(decimal naujaKaina)\n\
+      \    {{\n        if (naujaKaina > 0)\n        {{\n            kaina = naujaKaina;\n\
+      \        }}\n    }}\n\n    public decimal GautiKaina()\n    {{\n        return\
+      \ kaina;\n    }}\n\n    public void NustatytiPavadinima(string naujasPavadinimas)\n\
+      \    {{\n        pavadinimas = naujasPavadinimas;\n    }}\n\n    public string\
+      \ GautiPavadinima()\n    {{\n        return pavadinimas;\n    }}\n}}\n\npublic\
+      \ class Program\n{{\n    public static void Main()\n    {{ \n        Preke preke\
+      \ = new Preke();\n        preke.NustatytiPavadinima(\"Knyga\");\n        preke.NustatytiKaina(25.99m);\n\
+      \n        Console.WriteLine($\"Prek\u0117s pavadinimas: {{preke.GautiPavadinima()}}\"\
+      );\n        Console.WriteLine($\"Prek\u0117s kaina: {{preke.GautiKaina()}}\");\n\
+      \    }}\n}}"
+  utter_question_43_usage:
+  - text: "C# kalboje private po\u017Eymis nurodo, kad klas\u0117s narys (laukai,\
+      \ savyb\u0117s, metodai) yra prieinamas tik pa\u010Dios klas\u0117s viduje.\
+      \ Tai numatytasis matomumo lygis, jei nenurodytas joks modifikatorius. public\
+      \ po\u017Eymis leid\u017Eia klas\u0117s nariams b\u016Bti prieinamiems i\u0161\
+      \ i\u0161or\u0117s, taip leid\u017Eiant kitiems kodams naudotis \u0161iais nariais."
+  utter_question_43_readmore:
+  - text: "Daugiau informacijos apie private ir public po\u017Eymius galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapiuose 63-65."
+  utter_question_44_answer:
+  - text: "Metodai C# kalboje yra funkcijos, apibr\u0117\u017Eian\u010Dios objekt\u0173\
+      \ elgsen\u0105. Jie apra\u0161omi naudojant gr\u0105\u017Einimo tip\u0105, pavadinim\u0105\
+      , parametr\u0173 s\u0105ra\u0161\u0105 ir k\u016Bn\u0105."
+  utter_question_44_answer_more:
+  - text: "Metodai C# kalboje yra klas\u0117s dalis, kuri apibr\u0117\u017Eia tam\
+      \ tikr\u0105 elgsen\u0105 arba veiksmus, kuriuos gali atlikti klas\u0117s objektai.\
+      \ Metodas apra\u0161omas nurodant gr\u0105\u017Einimo tip\u0105 (pvz., void,\
+      \ int, string), metodo pavadinim\u0105, parametr\u0173 s\u0105ra\u0161\u0105\
+      \ ir k\u016Bn\u0105, kuris apima vykdom\u0105 kod\u0105. Metodai gali gr\u0105\
+      \u017Einti reik\u0161m\u0119 arba atlikti veiksmus be gr\u0105\u017Einamosios\
+      \ vert\u0117s (void)."
+  utter_question_44_provide_example:
+  - text: "csharp \n\npublic class Matematika\n{{\n    public int Sudetis(int a, int\
+      \ b)\n    {{\n        return a + b;\n    }}\n\n    public void SpausdintiSveikinima()\n\
+      \    {{\n        Console.WriteLine(\"Sveiki atvyk\u0119 \u012F matematikos program\u0105\
+      !\");\n    }}\n}}\n\npublic class Program\n{{\n    public static void Main()\n\
+      \    {{\n        Matematika mat = new Matematika(); \n        int suma = mat.Sudetis(3,\
+      \ 4); \n        Console.WriteLine($\"Suma: {{suma}}\"); \n\n        mat.SpausdintiSveikinima();\n\
+      \    }}\n}}"
+  utter_question_44_usage:
+  - text: "Metodai C# kalboje yra klas\u0117s dalis, kuri apibr\u0117\u017Eia tam\
+      \ tikr\u0105 elgsen\u0105 arba veiksmus, kuriuos gali atlikti klas\u0117s objektai.\
+      \ Metodas apra\u0161omas nurodant gr\u0105\u017Einimo tip\u0105 (pvz., void,\
+      \ int, string), metodo pavadinim\u0105, parametr\u0173 s\u0105ra\u0161\u0105\
+      \ ir k\u016Bn\u0105, kuris apima vykdom\u0105 kod\u0105. Metodai gali gr\u0105\
+      \u017Einti reik\u0161m\u0119 arba atlikti veiksmus be gr\u0105\u017Einamosios\
+      \ vert\u0117s (void)."
+  utter_question_44_readmore:
+  - text: Daugiau informacijos apie metodus galite rasti dokumente "117-2023-RD-T03-Pagrindiniai
+      C# elementai" puslapiuose 70-72.
+  utter_question_45_answer:
+  - text: "Metodai, gr\u0105\u017Einantys atsakym\u0105 per vard\u0105, naudoja return\
+      \ rakta\u017Eod\u012F, kad gr\u0105\u017Eint\u0173 vert\u0119 kvie\u010Dian\u010D\
+      iam kodui."
+  utter_question_45_answer_more:
+  - text: "C# kalboje metodai, gr\u0105\u017Einantys atsakym\u0105 per vard\u0105\
+      , turi gr\u0105\u017Einimo tip\u0105 (pvz., int, string) ir naudoja return rakta\u017E\
+      od\u012F, kad gr\u0105\u017Eint\u0173 reik\u0161m\u0119 kvie\u010Dian\u010D\
+      iam kodui. Metodo k\u016Bne atliekami veiksmai ir, kai rezultatas yra paruo\u0161\
+      tas, jis gr\u0105\u017Einamas naudojant return i\u0161rai\u0161k\u0105. Pavyzd\u017E\
+      iui, metodas RastiSum\u0105() gali gr\u0105\u017Einti dviej\u0173 skai\u010D\
+      i\u0173 sum\u0105."
+  utter_question_45_provide_example:
+  - text: "csharp\n\npublic class Matematika\n{{\n    public int Sudetis(int a, int\
+      \ b)\n    {{\n        return a + b;\n    }}\n\n    public double RastiVidurki(int[]\
+      \ skaiciai)\n    {{\n        int suma = 0;\n        foreach (int sk in skaiciai)\n\
+      \        {{\n            suma += sk;\n        }}\n        return (double)suma\
+      \ / skaiciai.Length;\n    }}\n}}\n\npublic class Program\n{{\n    public static\
+      \ void Main()\n    {{\n        Matematika mat = new Matematika();\n        int\
+      \ suma = mat.Sudetis(5, 7);\n        Console.WriteLine($\"Suma: {{suma}}\");\n\
+      \n        int[] skaiciai = {{ 1, 2, 3, 4, 5 }};\n        double vidurkis = mat.RastiVidurki(skaiciai);\n\
+      \        Console.WriteLine($\"Vidurkis: {{vidurkis}}\");\n    }}\n}}"
+  utter_question_45_usage:
+  - text: "\u0160ie metodai naudojami, kai reikia atlikti skai\u010Diavimus arba gauti\
+      \ informacij\u0105 i\u0161 metodo ir j\u0105 perduoti tolesniam naudojimui programoje.\
+      \ Jie leid\u017Eia kurti pakartotinai naudojam\u0105 ir organizuot\u0105 kod\u0105\
+      ."
+  utter_question_45_readmore:
+  - text: "Daugiau informacijos apie metodus, gr\u0105\u017Einan\u010Dius atsakym\u0105\
+      \ per vard\u0105, galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\"\
+      \ puslapyje 72."
+  utter_question_46_answer:
+  - text: "Metodai, kurie atsakym\u0105 gr\u0105\u017Eina per parametr\u0173 s\u0105\
+      ra\u0161\u0105, naudoja ref arba out rakta\u017Eod\u017Eius, kad perduot\u0173\
+      \ reik\u0161mes atgal kvie\u010Dian\u010Diam kodui."
+  utter_question_46_answer_more:
+  - text: "C# kalboje metodai gali gr\u0105\u017Einti atsakymus per parametr\u0173\
+      \ s\u0105ra\u0161\u0105, naudodami ref arba out rakta\u017Eod\u017Eius. ref\
+      \ nurodo, kad parametras perduodamas pagal nuorod\u0105 ir gali b\u016Bti pakeistas\
+      \ metodo viduje. out nurodo, kad parametras bus naudojamas gr\u0105\u017Einti\
+      \ reik\u0161m\u0119 i\u0161 metodo ir jis turi b\u016Bti priskirtas metodo viduje.\
+      \ \u0160is metodas leid\u017Eia gr\u0105\u017Einti kelias reik\u0161mes i\u0161\
+      \ vieno metodo."
+  utter_question_46_provide_example:
+  - text: "csharp\n\npublic class Matematika\n{{\n    public void RastiSumaIrVidurki(int[]\
+      \ skaiciai, out int suma, out double vidurkis)\n    {{\n        suma = 0;\n \
+      \       foreach (int sk in skaiciai)\n        {{\n            suma += sk;\n \
+      \       }}\n        vidurkis = (double)suma / skaiciai.Length;\n    }}\n}}\n\n\
+      public class Program\n{{\n    public static void Main()\n    {{\n        Matematika\
+      \ mat = new Matematika();\n        int[] skaiciai = {{ 1, 2, 3, 4, 5 }};\n\n \
+      \       mat.RastiSumaIrVidurki(skaiciai, out int suma, out double vidurkis);\n\
+      \        Console.WriteLine($\"Suma: {{suma}}, Vidurkis: {{vidurkis}}\");\n    }}\n\
+      }}"
+  utter_question_46_usage:
+  - text: "\u0160ie metodai naudojami, kai reikia gr\u0105\u017Einti daugiau nei vien\u0105\
+      \ reik\u0161m\u0119 arba kai reikia perduoti didel\u012F duomen\u0173 kiek\u012F\
+      \ per parametr\u0173 s\u0105ra\u0161\u0105. Tai leid\u017Eia efektyviau naudoti\
+      \ atmint\u012F ir suma\u017Eina duomen\u0173 kopijavimo kiek\u012F."
+  utter_question_46_readmore:
+  - text: "Daugiau informacijos apie metodus, kurie gr\u0105\u017Eina atsakym\u0105\
+      \ per parametr\u0173 s\u0105ra\u0161\u0105, galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai\
+      \ C# elementai\" puslapyje 70."
+  utter_question_47_answer:
+  - text: "S\u0105sajos metodai (getter ir setter) naudojami savybi\u0173 reik\u0161\
+      m\u0117ms gauti ir nustatyti, apibr\u0117\u017Eiant vie\u0161uosius metodus\
+      \ klas\u0117je."
+  utter_question_47_answer_more:
+  - text: "C# kalboje s\u0105sajos metodai, dar \u017Einomi kaip getter ir setter\
+      \ metodai, naudojami savybi\u0173 reik\u0161m\u0117ms gauti ir nustatyti. Getter\
+      \ metodai (get) gr\u0105\u017Eina savyb\u0117s reik\u0161m\u0119, o setter metodai\
+      \ (set) priskiria reik\u0161m\u0119 savybei. \u0160ie metodai apra\u0161omi\
+      \ klas\u0117s viduje, naudojant public prieigos modifikatori\u0173, kad b\u016B\
+      t\u0173 galima valdyti savybi\u0173 reik\u0161mes i\u0161 i\u0161or\u0117s."
+  utter_question_47_provide_example:
+  - text: "csharp\n\npublic class Preke\n\n{{\n    private string pavadinimas;\n  \
+      \  private decimal kaina;\n\n    public string GautiPavadinima()\n    {{\n  \
+      \      return pavadinimas;\n    }}\n\n    public void NustatytiPavadinima(string\
+      \ pavad)\n    {{\n        pavadinimas = pavad;\n    }}\n\n    public decimal GautiKaina()\n\
+      \    {{\n        return kaina;\n    }}\n\n    public void NustatytiKaina(decimal\
+      \ naujaKaina)\n    {{\n        if (naujaKaina > 0)\n        {{\n            kaina\
+      \ = naujaKaina;\n        }}\n    }}\n}}\n\npublic class Program\n{{\n    public\
+      \ static void Main()\n    {{\n        Preke preke = new Preke();\n        preke.NustatytiPavadinima(\"\
+      Knyga\");\n        preke.NustatytiKaina(25.99m);\n\n        Console.WriteLine($\"\
+      Prek\u0117s pavadinimas: {{preke.GautiPavadinima()}}\");\n        Console.WriteLine($\"\
+      Prek\u0117s kaina: {{preke.GautiKaina()}}\");\n    }}\n}}"
+  utter_question_47_usage:
+  - text: "Getter ir setter metodai naudojami inkapsuliacijai u\u017Etikrinti, leid\u017E\
+      iant saugiai valdyti ir kontroliuoti savybi\u0173 reik\u0161mes. Jie padeda\
+      \ apsaugoti vidinius duomenis ir u\u017Etikrina, kad reik\u0161m\u0117s bus\
+      \ tinkamai nustatytos ir gautos."
+  utter_question_47_readmore:
+  - text: Daugiau informacijos apie getter ir setter metodus galite rasti dokumente
+      "117-2023-RD-T03-Pagrindiniai C# elementai" puslapiuose 80-83.
+  utter_question_48_answer:
+  - text: "for ciklo inicializavimo dalis nustato kintam\u0105j\u012F ar kintamuosius,\
+      \ kurie bus naudojami ciklo kontrol\u0117je."
+  utter_question_48_answer_more:
+  - text: "Inicializavimo dalis for cikle paprastai naudojama kintamojo inicializavimui,\
+      \ kuris kontroliuoja ciklo iteracijas. Tai yra pirmoji for ciklo dalis, ir ji\
+      \ vykdoma tik vien\u0105 kart\u0105 prie\u0161 pradedant cikl\u0105. Pavyzd\u017E\
+      iui, for (int i = 0; ...) inicializuoja i kintam\u0105j\u012F su pradine reik\u0161\
+      me 0. "
+  utter_question_48_provide_example:
+  - text: "for (int i = 5; i < 15; i++)\n{{\n    Console.WriteLine($\"Dabartin\u0117\
+      \ i reik\u0161m\u0117: {{i}}\");\n}}"
+  utter_question_48_usage:
+  - text: "Inicializavimo dalis naudojama kintam\u0173j\u0173 pradiniam nustatymui,\
+      \ kurie bus naudojami ciklo valdymui ir iteracij\u0173 skai\u010Diavimui."
+  utter_question_48_readmore:
+  - text: "Daugiau informacijos apie for ciklo inicializavimo dal\u012F galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 47."
+  utter_question_49_answer:
+  - text: "for ciklo s\u0105lygos dalis tikrina, ar ciklas turi b\u016Bti t\u0119\
+      siamas."
+  utter_question_49_answer_more:
+  - text: "S\u0105lygos dalis for cikle nurodo logik\u0105, kuri tikrina, ar ciklas\
+      \ turi b\u016Bti vykdomas toliau. Kiekvienos iteracijos prad\u017Eioje \u0161\
+      i s\u0105lyga yra tikrinama, ir jei ji yra true, ciklas t\u0119siasi; jei false,\
+      \ ciklas sustoja. Pavyzd\u017Eiui, for (int i = 0; i < 10; i++) s\u0105lyga\
+      \ yra i < 10."
+  utter_question_49_provide_example:
+  - text: "for (int i = 0; i <= 10; i++)\n{{\n    Console.WriteLine($\"i yra ma\u017E\
+      iau arba lygu 10: {{i}}\");\n}}"
+  utter_question_49_usage:
+  - text: "S\u0105lygos dalis naudojama kontroliuoti, kiek kart\u0173 ciklas bus vykdomas,\
+      \ pvz., nustatyti rib\u0105 ar sustojimo kriterij\u0173."
+  utter_question_49_readmore:
+  - text: "Daugiau informacijos apie for ciklo s\u0105lygos dal\u012F galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 47."
+  utter_question_50_answer:
+  - text: "for ciklo iteracijos dalis nurodo, kaip kei\u010Diasi cikl\u0105 kontroliuojantis\
+      \ kintamasis po kiekvienos iteracijos."
+  utter_question_50_answer_more:
+  - text: "Iteracijos dalis for cikle yra vykdoma kiekvienos iteracijos pabaigoje\
+      \ ir paprastai naudojama cikl\u0105 kontroliuojan\u010Dio kintamojo padidinimui\
+      \ arba suma\u017Einimui. Pavyzd\u017Eiui, for (int i = 0; i < 10; i++) dalis\
+      \ i++ padidina i reik\u0161m\u0119 po kiekvienos iteracijos."
+  utter_question_50_provide_example:
+  - text: "for (int i = 0; i < 10; i++)\n{{\n    Console.WriteLine(i);\n}}"
+  utter_question_50_usage:
+  - text: "Iteracijos dalis naudojama cikl\u0105 kontroliuojan\u010Di\u0173 kintam\u0173\
+      j\u0173 reik\u0161mi\u0173 keitimui, siekiant u\u017Etikrinti, kad ciklas bus\
+      \ vykdomas teising\u0105 skai\u010Di\u0173 kart\u0173."
+  utter_question_50_readmore:
+  - text: "Daugiau informacijos apie for ciklo iteracijos dal\u012F galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 47."
+  utter_question_51_answer:
+  - text: "for ciklas gali tur\u0117ti kelis inicializatorius, atskirtus kableliais."
+  utter_question_51_answer_more:
+  - text: "C# kalboje for ciklas gali tur\u0117ti kelis inicializatorius, kurie atskiriami\
+      \ kableliais. Tai leid\u017Eia inicializuoti daugiau nei vien\u0105 kintam\u0105\
+      j\u012F ciklo prad\u017Eioje. Pavyzd\u017Eiui, for (int i = 0, j = 10; i < j;\
+      \ i++, j--) inicializuoja du kintamuosius i ir j."
+  utter_question_51_provide_example:
+  - text: "csharp\n\nfor (int i = 0, j = 10; i < j; i++, j--)\n{{\n    Console.WriteLine($\"\
+      i: {{i}}, j: {{j}}\");\n}}"
+  utter_question_51_usage:
+  - text: "Keliais inicializatoriais for cikle galima naudoti, kai reikia kontroliuoti\
+      \ daugiau nei vien\u0105 kintam\u0105j\u012F ciklo metu, pvz., simetri\u0161\
+      kam iteravimui arba skai\u010Diavimams i\u0161 abiej\u0173 gal\u0173."
+  utter_question_51_readmore:
+  - text: "Daugiau informacijos apie for cikl\u0105 su keliais inicializatoriais galite\
+      \ rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 47."
+  utter_question_52_answer:
+  - text: "for ciklas gali tur\u0117ti kelis iteracijos veiksmus, atskirtus kableliais."
+  utter_question_52_answer_more:
+  - text: "C# kalboje for ciklas gali tur\u0117ti kelis iteracijos veiksmus, kurie\
+      \ atskiriami kableliais. Tai leid\u017Eia vykdyti daugiau nei vien\u0105 veiksm\u0105\
+      \ po kiekvienos ciklo iteracijos. Pavyzd\u017Eiui, for (int i = 0; i < 10; i++,\
+      \ j--) padidina i ir suma\u017Eina j po kiekvienos iteracijos."
+  utter_question_52_provide_example:
+  - text: "csharp\n\nint j = 10;\n\nfor (int i = 0; i < 10; i++, j--)\n{{\n    Console.WriteLine($\"\
+      i: {{i}}, j: {{j}}\");\n}}"
+  utter_question_52_usage:
+  - text: "C# kalboje for ciklas gali tur\u0117ti kelis iteracijos veiksmus, kurie\
+      \ atskiriami kableliais. Tai leid\u017Eia vykdyti daugiau nei vien\u0105 veiksm\u0105\
+      \ po kiekvienos ciklo iteracijos. Pavyzd\u017Eiui, for (int i = 0; i < 10; i++,\
+      \ j--) padidina i ir suma\u017Eina j po kiekvienos iteracijos."
+  utter_question_52_readmore:
+  - text: "Daugiau informacijos apie for cikl\u0105 su keliais iteracijos veiksmais\
+      \ galite rasti dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje\
+      \ 47."
+  utter_question_30_answer:
+  - text: "S\u0105lygin\u0117s login\u0117s operacijos C# kalboje yra && (s\u0105\
+      lygin\u0117 daugyba) ir || (s\u0105lygin\u0117 sud\u0117tis), kurios tikrina\
+      \ dviej\u0173 s\u0105lyg\u0173 teisingum\u0105."
+  utter_question_30_answer_more:
+  - text: "C# kalboje s\u0105lygin\u0117 daugyba (&&) ir s\u0105lygin\u0117 sud\u0117\
+      tis (||) yra login\u0117s operacijos, naudojamos dviej\u0173 s\u0105lyg\u0173\
+      \ tikrinimui: \n\n&& (s\u0105lygin\u0117 daugyba): rezultatas yra true tik tada,\
+      \ kai abu operandai yra true. Pvz., true && false yra false. \n\n|| (s\u0105\
+      lygin\u0117 sud\u0117tis): rezultatas yra true, kai bent vienas operandas yra\
+      \ true. Pvz., true || false yra true. "
+  utter_question_30_provide_example:
+  - text: "csharp \n\nusing System; \n\npublic class Program \n{{ \n    public static\
+      \ void Main() \n    {{ \n        int age = 20; \n        bool hasID = true; \n\
+      \n        if (age >= 18 && hasID) \n        {{ \n            Console.WriteLine(\"\
+      J\u016Bs galite \u012Feiti.\"); \n        }} \n        else \n        {{ \n  \
+      \          Console.WriteLine(\"J\u016Bs negalite \u012Feiti.\"); \n        }}\n\
+      \n        bool isWeekend = true; \n        bool isHoliday = false; \n\n    \
+      \    if (isWeekend || isHoliday) \n        {{ \n            Console.WriteLine(\"\
+      J\u016Bs galite ils\u0117tis.\"); \n        }} \n        else \n        {{ \n\
+      \            Console.WriteLine(\"J\u016Bs turite eiti \u012F darb\u0105.\");\
+      \ \n        }} \n    }} \n}} "
+  utter_question_30_usage:
+  - text: "\u0160ios operacijos da\u017Enai naudojamos if s\u0105lygose, kur reikia\
+      \ patikrinti kelias s\u0105lygas. S\u0105lygin\u0117 daugyba naudojama, kai\
+      \ reikia, kad abi s\u0105lygos b\u016Bt\u0173 teisingos, o s\u0105lygin\u0117\
+      \ sud\u0117tis \u2013 kai u\u017Etenka vienos teisingos s\u0105lygos."
+  utter_question_30_readmore:
+  - text: "Daugiau informacijos apie s\u0105lygines logines operacijas galite rasti\
+      \ dokumente \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapiuose 18-19."
+  utter_question_37_answer:
+  - text: "Ciklo sakinys do...while C# kalboje vykdo kod\u0105 bent vien\u0105 kart\u0105\
+      \ ir kartoja tol, kol s\u0105lyga yra tenkinama."
+  utter_question_37_answer_more:
+  - text: "Ciklo sakinys do...while C# kalboje pirmiausia vykdo ciklo k\u016Bn\u0105\
+      , o tada tikrina s\u0105lyg\u0105. Jei s\u0105lyga yra true, ciklas kartojamas.\
+      \ Pvz., do {{ ... }} while (condition); u\u017Etikrina, kad ciklo k\u016Bnas bus\
+      \ vykdomas bent vien\u0105 kart\u0105."
+  utter_question_37_provide_example:
+  - text: "csharp\n\nusing System;\n\npublic class Program\n{{\n    public static void\
+      \ Main()\n    {{\n        int x = 0;\n        do\n        {{\n            Console.WriteLine($\"\
+      x: {{x}}\");\n            x++;\n        }}\n        while (x < 5);\n    }}\n}}"
+  utter_question_37_usage:
+  - text: "Do...while ciklai naudojami situacijose, kur reikia bent vien\u0105 kart\u0105\
+      \ vykdyti ciklo k\u016Bn\u0105, nepriklausomai nuo s\u0105lygos. Tai naudinga,\
+      \ kai reikia atlikti veiksmus prie\u0161 tikrinant s\u0105lyg\u0105."
+  utter_question_37_readmore:
+  - text: "Daugiau informacijos apie do...while cikl\u0105 galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 50."
+  utter_question_20_answer:
+  - text: "C# kalboje operacijos turi prioritetus, kurie nustato operacij\u0173 vykdymo\
+      \ tvark\u0105. Auk\u0161tesnio prioriteto operacijos atliekamos pirmiau."
+  utter_question_20_answer_more:
+  - text: "Operacij\u0173 prioritetai C# kalboje nurodo, kuri operacija turi b\u016B\
+      ti atliekama pirmiau, kai yra kelios operacijos viename rei\u0161kinyje. Auk\u0161\
+      tesnio prioriteto operacijos, tokios kaip daugyba (*) ir dalyba (/), atliekamos\
+      \ pirmiau u\u017E \u017Eemesnio prioriteto operacijas, tokias kaip sud\u0117\
+      tis (+) ir atimtis (-). Jei operacijos turi vienod\u0105 prioritet\u0105, jos\
+      \ atliekamos i\u0161 kair\u0117s \u012F de\u0161in\u0119."
+  utter_question_20_provide_example:
+  - text: "csharp \n\nusing System;\n\npublic class Program \n\n{{ \n    public static\
+      \ void Main() \n    {{ \n        int a = 5; \n        int b = 2; \n        int\
+      \ c = 3; \n\n        int result = a + b * c; // Rezultatas bus 11, nes daugyba\
+      \ atliekama pirmiau \n        Console.WriteLine($\"Rezultatas: {{result}}\");\
+      \ \n    }} \n}} "
+  utter_question_20_usage:
+  - text: "Operacij\u0173 prioritetai naudojami kiekviename programavimo \u017Eingsnyje,\
+      \ kai reikia atlikti kelias operacijas vienu metu. Teisingas prioritet\u0173\
+      \ supratimas leid\u017Eia i\u0161vengti klaid\u0173 skai\u010Diavimuose ir ra\u0161\
+      yti efektyv\u0173 kod\u0105."
+  utter_question_20_readmore:
+  - text: "Daugiau informacijos apie operacij\u0173 prioritetus galite rasti dokumente\
+      \ \"117-2023-RD-T03-Pagrindiniai C# elementai\" puslapyje 7"
 slots:
   current_topic:
     type: text
     mappings:
     - type: from_entity
       entity: current_topic
-
 entities:
-  - current_topic
-
+- current_topic
 actions:
-  - action_answer_question
-  - action_clarify_question
-  - action_provide_examples
-  - action_explain_usage
-  - action_provide_readmore
-
+- action_answer_question
+- action_clarify_question
+- action_provide_examples
+- action_explain_usage
+- action_provide_readmore
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -1,52 +1,815 @@
-version: "3.1"
-
+version: '3.1'
 nlu:
-# Objektinis programavimas -----------------------------------------------------------
-- intent: question_1
+- intent: greet
   examples: |
-    - kas yra objektinis programavimas
-    - ka reiskia objektinis programavimas
-    - kas yra objektinis programavimas
-    - objektinis programavimas
-
-- intent: question_1_usage
+    - labas
+    - hello
+    - hi
+    - sveikas
+- intent: goodbye
   examples: |
-    - kur naudojamas objektinis programavimas
-    - panaudojimas objektinis programavimas
-
-- intent: question_1_examples
+    - ate
+    - iki susitikimo
+    - viso gero
+    - bye
+- intent: affirm
   examples: |
-    - pateik objektinio programavimo pavyzdziu
-    - objektinio programavimo pavyzdziai
-
-- intent: question_1_readmore
+    - taip
+    - "\u017Einoma"
+    - y
+    - gerai
+- intent: deny
   examples: |
-    - kur rasti info apie objektini programavima
-    - kur galeciau daugiau pasiskaityti apie apie objektini programavima
-    - kurioje skaidreje raso apie objektini programavima
-# ------------------------------------------------------------------------------------
-
-# Objektas ---------------------------------------------------------------------------
-- intent: question_2
+    - ne
+    - niekada
+    - nemanau
+    - man nepatinka
+    - "n\u0117 per kur"
+- intent: mood_great
   examples: |
-    - o kas yra objektas objektiniame programavime?
-    - o kas yra objektas
-    - o ka reiskia objektas?
-    - kas yra objektas?
-
-- intent: question_2_usage
+    - nuostabus
+    - puikus
+    - jauciuosi puikiai
+    - pas mane viskas gerai
+    - tobulai
+- intent: mood_unhappy
   examples: |
-    - kur naudojamas objektas
-    - kaip panaudojamas objektas
-
-- intent: question_2_examples
+    - man nesiseka
+    - nesijauciu gerai
+    - as nusivyles
+    - as labai liudnas
+    - as nelaimingas
+    - negerai
+- intent: bot_challenge
   examples: |
-    - pateik objekto pavyzdziu
-    - objektu pavyzdziai
-
-- intent: question_2_readmore
+    - ar tu botas?
+    - ar tu zmogus?
+    - ar as kalbu su robotu?
+    - ar as kalbu su zmogumi?
+    - kas tu?
+- intent: thank
   examples: |
-    - kur rasti info apie objektus
-    - kur galeciau daugiau pasiskaityti apie apie objektus
-    - kurioje skaidreje raso apie objekta
-  # ------------------------------------------------------------------------------------
+    - aciu
+    - dekui
+    - thanks
+- intent: not_understand
+  examples: |
+    - nesupratau
+    - gali patikslinti?
+    - nesuprantu
+    - patikslink
+- intent: where_is_it_used
+  examples: |
+    - kur tai naudojama
+    - kaip tai naudojama
+    - panaudojimas
+    - o kur jos naudojamos
+- intent: usage_examples
+  examples: |
+    - ar gali pateikti panaudojimo pavyzdziu
+    - pateik pavyzdziu
+    - duok man pavyzdi
+    - na pavyzdziui
+    - pvz
+- intent: read_more
+  examples: |
+    - kur galima daugiau pasiskaityti
+    - rasti daugiau info
+    - kurioje skaidreje info
+    - kur skaityti daugiau
+- intent: question_16
+  examples: |
+    - baziniai duomenu tipai
+    - veikia baziniai duomenu tipai
+    - "baziniai duomen\u0173 tipai c# kalboje"
+- intent: question_16_usage
+  examples: |
+    - "kur naudojami baziniai duomen\u0173 tipai"
+    - kaip naudojami baziniai duomenu tipai
+    - baziniu duomenu tipu naudojimas
+- intent: question_16_examples
+  examples: |
+    - "pateik bazini\u0173 duomen\u0173 tip\u0173 pavyzd\u017Ei\u0173"
+    - "bazini\u0173 duomen\u0173 tip\u0173 pavyzd\u017Eiai"
+    - pvz bazinis duomenu tipas
+- intent: question_16_readmore
+  examples: |
+    - pasiskaityti apie bazinius duomenu tipus
+    - placiau apie bazinius duomenu tipus
+    - "daugiau info apie bazinius duomen\u0173 tipus"
+- intent: question_17
+  examples: |
+    - "Kaip apibr\u0117\u017Eiamos konstantos c# kalboje"
+    - kas yra konstantos
+- intent: question_17_usage
+  examples: |
+    - kur naudojamos konstantos
+    - konstantu naudojimas
+    - kaip naudoti konstantas
+- intent: question_17_examples
+  examples: |
+    - pvz konstantu
+    - pateik konstantu pavyzdziu
+    - konstantu pavyzdziai
+- intent: question_17_readmore
+  examples: |
+    - daugiau pasiskaityti apie konstantas
+    - info apie konstantas
+    - placiau apie konstantas
+- intent: question_22
+  examples: |
+    - kas yra priskyrimo operacija
+    - ka reiskia priskyrimo operacija
+    - kaip veikia priskyrimo operacija
+- intent: question_22_usage
+  examples: |
+    - kur naudojama priskyrimo operacija
+    - kaip naudojama priskyrimo operacija
+- intent: question_22_examples
+  examples: |
+    - duok priskyrimo operacijos pavyzdziu
+    - pvz priskyrimo operacijos
+    - pateik priskyrimo operacijos pavyzdziu
+- intent: question_22_readmore
+  examples: |
+    - daugiau pasiskaityti apie priskyrimo operacija
+    - daugiau info apie priskyrimo operacija
+- intent: question_18
+  examples: |
+    - kokios yra pagrindines aritmetines operacijos
+    - kas yra pagrindines aritmetines operacijos
+- intent: question_18_usage
+  examples: |
+    - kur naudojamos pagrindines aritmetines operacijos
+    - kaip naudojamos pagrindines aritmetines operacijos
+    - pagrindiniu aritmetiniu operaciju naudojimas
+- intent: question_18_examples
+  examples: |
+    - pateik pagrindiniu aritmetiniu operaciju pavyzdziu
+    - pvz pagrindines aritmetines operacijos
+    - "pagrindiniu aritmetiniu operacij\u0173 pavyzdziai"
+- intent: question_18_readmore
+  examples: |
+    - daugiau pasiskaityti apie pagrindines aritmetines operacijas
+    - daugiau info apie pagrindines aritmetines operacijas
+- intent: question_19
+  examples: |
+    - kaip veikia liekanos operatorius
+    - sveikuju skaiciu liekanos operatoriaus veikimas
+    - kas yra sveikuju skaiciu liekanos operatorius
+- intent: question_19_usage
+  examples: |
+    - kur naudojamas liekanos operatorius
+    - sveikuju skaiciu liekanos operatoriaus panaudojimas
+    - kaip naudoti sveikuju skaiciu liekanos operatoriu
+- intent: question_19_examples
+  examples: |
+    - pavyzdziu apie liekanos operatoriu
+    - pateik pavyzdziu apie liekanos operatoriu
+    - pvz liekanos operatorius
+- intent: question_19_readmore
+  examples: |
+    - daugiau pasiskaityti apie sveikuju skaiciu liekanos operatoriu
+    - daugiau info apie sveikuju skaiciu liekanos operatoriu
+- intent: question_21
+  examples: |
+    - kas yra skliaustai
+    - 'kaip veikia skliaustai '
+- intent: question_21_usage
+  examples: |
+    - kur naudojami skliaustai
+    - kaip naudojami skliaustai
+- intent: question_21_examples
+  examples: |
+    - pateik skliaustu pavyzdziu
+    - pvz skliaustai
+- intent: question_21_readmore
+  examples: |
+    - daugiau pasiskaityti apie skliaustus
+    - daugiau info apie skliaustus
+    - info apie skliaustus
+- intent: question_23
+  examples: |
+    - kas yra prefiksinis operatorius
+    - kas yra pofiksinis operatorius
+    - kaip veikia prefiksinis operatorius
+    - kaip veikia pofiksinis operatorius
+- intent: question_23_usage
+  examples: |
+    - kur naudojami prefiksiniai operatoriai
+    - kaip naudojami pofiksiniai operatoriai
+- intent: question_23_examples
+  examples: |
+    - pateik prefiksinio operatoriaus pavyzdziu
+    - prefiksinio operatoriaus pavyzdziai
+    - pofiksinio operatoriaus pavyzdys
+    - prefiksinio operatoriaus pavyzdys
+- intent: question_23_readmore
+  examples: |
+    - daugiau pasiskaityti apie pofiksinius operatorius
+    - daugiau info apie prefiksinius operatorius
+    - skaidre apie prefiksinius operatorius
+- intent: question_25
+  examples: |
+    - kas yra pagrindinis salygos operatorius
+    - kaip veikia pagrindinis salygos operatorius
+- intent: question_25_usage
+  examples: |
+    - kur naudojamas pagrindinis salygos operatorius
+    - kaip naudojamas pagrindinis salygos operatorius
+    - pagrindinio salygos operatoriaus naudojimas
+- intent: question_25_examples
+  examples: |
+    - pateik pavyzdziu apie pagrindini salygos operatoriu
+    - pagrindinio salygos operatoriaus pvz
+    - pagrindinio salygos operatoriaus pavyzdys
+- intent: question_25_readmore
+  examples: |
+    - daugiau pasiskaityti apie pagrindinius salygos operatorius
+    - daugiau info apie pagrindinius salygos operatorius
+- intent: question_26
+  examples: |
+    - kas yra loginis kintamasis
+    - loginio kintamojo aprasymas
+    - kaip veikia loginis kintamasis
+- intent: question_26_usage
+  examples: |
+    - kur naudojamas loginis kintamasis
+    - kaip naudojamas loginis kintamasis
+    - loginio kintamojo naudojimas
+- intent: question_26_examples
+  examples: |
+    - loginio kintamojo pavyzdys
+    - pateik loginio kintamojo pavyzdziu
+- intent: question_26_readmore
+  examples: |
+    - daugiau pasiskaityti apie logini kintamaji
+    - daugiau info  apie logini kintamaji
+    - loginis kintamasis skaidre
+- intent: question_34
+  examples: |
+    - kas yra while ciklas
+    - kaip veikia while
+    - while sakinio veikimas
+- intent: question_34_usage
+  examples: |
+    - kur naudojamas while ciklas
+    - while panaudojimas
+    - kaip while naudojamas
+- intent: question_34_examples
+  examples: |
+    - pateik pavyzdi apie while cikla
+    - pvz while
+    - duok pavyzdziu while ciklo
+- intent: question_34_readmore
+  examples: |
+    - daugiau paskaityti apie while cikla
+    - daugiau info apie while cikla
+    - skaidres apie while ciklas
+- intent: question_36
+  examples: |
+    - kas yra foreach ciklas
+    - kaip veikia foreach ciklas
+    - foreach ciklas
+- intent: question_36_usage
+  examples: |
+    - kur naudojamas foreach ciklas
+    - kaip naudojamas foreach ciklas
+    - foreach ciklo naudojimas
+- intent: question_36_examples
+  examples: |
+    - pateik foreach pavyzdi
+    - foreach ciklo pavyzdys
+    - pvz foreach
+- intent: question_36_readmore
+  examples: |
+    - daigiau pasiskaityti apie foreach cikla
+    - placiau apie foreach
+    - skaidres apie foreach
+- intent: question_24
+  examples: |
+    - kas yra loginiai reiskiniai
+    - kaip veikia loginiai reiskiniai
+- intent: question_24_usage
+  examples: |
+    - kur naudojami loginiai reiskiniai
+    - kaip naudojami loginiai reiskiniai
+    - loginiu reiskiniu naudojimas
+- intent: question_24_examples
+  examples: |
+    - pateik loginiu reiskiniu pavyzdziu
+    - loginiai reiskiniai pvz
+    - loginiio reiskinio pavyzdzys
+- intent: question_24_readmore
+  examples: |
+    - daugiau pasiskaityti apie loginius reiskinius
+    - info apie loginius reiskinius
+- intent: question_27
+  examples: |
+    - kokie yra salygos operatoriai
+    - pagrindiniai salygos operatoriai
+    - kas yra salygos operatorius
+- intent: question_27_usage
+  examples: |
+    - salygos operatoriaus panaudojimas
+    - kaip naudojamas salygos operatorius
+    - pagrindiniu salygos operatoriu panaudojimas
+- intent: question_27_examples
+  examples: |
+    - duok man salygos operatoriaus pavyzdi
+    - salygos operatoriaus pavyzdys
+    - pvz salygos operatorius
+- intent: question_27_readmore
+  examples: |
+    - kur daugiau pasiskaityti apie salygos operatorius
+    - placiau apie salygos operatorius
+    - info apie salygos operatorius
+- intent: question_28
+  examples: |
+    - kas yra loginis kintamasis
+    - kaip aprasomas loginis kintamasis
+    - kaip veikia loginiai kintamieji
+- intent: question_28_usage
+  examples: |
+    - kaip naudojamas loginis kintamasis
+    - kur naudojami loginiai kintamieji
+    - loginio kintamojo naudojimas
+- intent: question_28_examples
+  examples: |
+    - pateik loginiu kintamuju pavyzdziu
+    - loginio kintamojo pavyzdys
+    - pvz loginis kintamasis
+- intent: question_28_readmore
+  examples: |
+    - daugiau pasiskaityti apie loginius kintamuosius
+    - placiau apie loginius kintamuosius
+    - daugiau info apie logini kintamaji
+- intent: question_29
+  examples: |
+    - kaip veikia logines operacijos
+    - kas yra logines operacijos
+    - logines operacijos veikimas
+- intent: question_29_usage
+  examples: |
+    - kur naudojama logine operacija
+    - kaip naudojamos logines operacijos
+    - loginiu operaciju naudojimas
+- intent: question_29_examples
+  examples: |
+    - loginiu operaciju pavyzdys
+    - pateik logines operacijos pavyzdi
+    - pvz logine operacija
+- intent: question_29_readmore
+  examples: |
+    - pasiskaityti apie logines operacijas
+    - placiau apie logine operacija
+    - daugiau info apie logines operacijas
+- intent: question_31
+  examples: |
+    - kas yra xor
+    - kaip veikia xor
+- intent: question_31_usage
+  examples: |
+    - kur naudojamas xor
+    - kaip naudojama xor
+    - xor panaudojimas
+- intent: question_31_examples
+  examples: |
+    - pateik xor pavyzdi
+    - xor pavyzdziai
+    - pvz xor
+- intent: question_31_readmore
+  examples: |
+    - daugiau pasiskaityti apie xor
+    - xor daugiau info
+    - skaidre xor
+- intent: question_32
+  examples: |
+    - kaip veikia operacijos salygos tikrinimo sakiniuose
+    - logine operacija salygos tikrinimo sakinyje
+- intent: question_32_usage
+  examples: |
+    - kur naudojama logine operacija tikrinimo sakinyje
+    - logines operacijos tikrinimo sakinyje panaudojimas
+- intent: question_32_examples
+  examples: |
+    - pateik logines operacijos salygos tikrinimo sakinyje pavyzdi
+    - pvz logine operacija tikrinimo sakinyje
+    - logines operacijos tikrinimo sakinyje pavyzdys
+- intent: question_32_readmore
+  examples: |
+    - daugiau pasiskaityti apie logines operacijas tikrinimo sakiniuose
+    - info apie apie logine operacija tikrinimo sakinyje
+    - logines operacijas tikrinimo sakiniuose skaidre
+- intent: question_33
+  examples: |
+    - kaip veikia if sakinys
+    - if statement
+    - kas yra salygos tikrinimo sakinys
+- intent: question_33_usage
+  examples: |
+    - kur naudojamas if statement
+    - kur naudojami salygos tikrinimo sakiniai
+    - salygos tikrinimo panaudojimas
+    - if statement naudojimas
+- intent: question_33_examples
+  examples: |
+    - pateik if pavyzdi
+    - salygos tikrinimo sakinio pavyzdziai
+    - pvz if statement
+    - pvz if sakinys
+- intent: question_33_readmore
+  examples: |
+    - daugiau pasiskaityti apie if sakinius
+    - placiau apie salygos sakinius
+- intent: question_35
+  examples: |
+    - kaip veikia for ciklas
+    - kas yra for
+    - for ciklas
+- intent: question_35_usage
+  examples: |
+    - kur naudojamas for ciklas
+    - kaip naudojamas for ciklas
+    - for panaudojimas
+- intent: question_35_examples
+  examples: |
+    - pateik for ciklo pavyzdi
+    - for ciklo pavyzdys
+    - pvz for
+- intent: question_35_readmore
+  examples: |
+    - daugiau pasiskaityti apie for cikla
+    - daugiau info apie for cikla
+    - skaidres apie for cikla
+- intent: question_38
+  examples: |
+    - kaip atliekama duomenu ivestis
+    - kas yra console klase
+    - kaip veikia duomenu ivestis su console
+- intent: question_38_usage
+  examples: |
+    - kur naudojama duomenu ivestis su console
+    - kodel naudojama duomenu ivestis su console
+    - console ivesties naudojimas
+- intent: question_38_examples
+  examples: |
+    - pateik duomenu ivesties pavyzdi
+    - pateik console pavyzdi
+    - console duomenu ivesties pavyzdys
+- intent: question_38_readmore
+  examples: |
+    - daugiau pasiskaityti apie console duomenu ivesti
+    - daugiau info apie console duomenu isvesti
+    - skaidre apie console duomenu ivesti
+- intent: question_39
+  examples: |
+    - kaip atliekama daug reiksmiu ivedimas vienoje eiluteje
+    - daug reiksmiu ivedimas vienoje eiluteje
+    - kas yra daug reiksmiu ivedimas vienoje eiluteje
+- intent: question_39_usage
+  examples: |
+    - kur naudojamas daug reiksmiu ivedimas vienoje eiluteje
+    - kaip naudojamas daug reiksmiu ivedimas vienoje eiluteje
+    - daug reiksmiu ivedimas vienoje eiluteje panaudojimas
+- intent: question_39_examples
+  examples: |
+    - pateik pavyzdi apie daug reiksmiu ivedima vienoje eiluteje
+    - pvz daug reiksmiu ivedimas vienoje eiluteje
+- intent: question_39_readmore
+  examples: |
+    - daugiau pasiskaityti apie daug reiksmiu ivedimas vienoje eiluteje
+    - placiau apie daug reiksmiu ivedimas vienoje eiluteje
+    - skaidres apie daug reiksmiu ivedimas vienoje eiluteje
+- intent: question_40
+  examples: |
+    - kaip veikia isviesties formatavimas
+    - kas yra isvesties formatavimas
+    - "kaip formatuoti i\u0161vest\u012F"
+- intent: question_40_usage
+  examples: |
+    - kur naudojamas isvesties formatavimas
+    - kaip naudojamas isvesties formatavimas
+    - isvesties formatavimo panaudojimas
+- intent: question_40_examples
+  examples: |
+    - pateik isvesties formatavimo pavyzdi
+    - isvesties formatavimo pavyzdys
+    - pvz isvesties formatavimas
+- intent: question_40_readmore
+  examples: |
+    - daugiau pasiskaityti apie isvesties formatavima
+    - placiau apie isvesties formatavima
+    - skaidres apie isvesties formatavima
+- intent: question_41
+  examples: |
+    - kaip kuriama klase
+    - kaip sukurti klase
+    - klases kurimas
+- intent: question_41_usage
+  examples: |
+    - "kur naudojamos klas\u0117s"
+    - kaip naudojamos klases
+    - klasiu panaudojimas
+- intent: question_41_examples
+  examples: |
+    - pateik klases kurimo pavyzdi
+    - klases kurimo pavyzdys
+    - pvz klases kurimas
+    - duok klases sukurimo pavyzdziu
+- intent: question_41_readmore
+  examples: |
+    - daugiau pasiskaityti apie klases
+    - placiau apie klases
+    - daugiau info apie klases
+    - skaidres apie klases
+- intent: question_42
+  examples: |
+    - kas yra matomumas klasiu elementu
+    - kaip veikia klasiu elementu matomumas
+    - ka reiskia elementu matomumas
+- intent: question_42_usage
+  examples: |
+    - kur naudojmas elemento matomumas
+    - kaip naudojamas klases elemento matomumas
+    - klases elemento matomumo panaudojimas
+- intent: question_42_examples
+  examples: |
+    - pateik pavyzdziu apie klases elementu matomuma
+    - klases elemento matomumo pavyzdys
+    - pvz elemento matomumas
+- intent: question_42_readmore
+  examples: |
+    - daugiau pasiskaityti apie klases elemento matomuma
+    - placiau apie klases elemento matomuma
+    - skaidres apie klases elemento matomuma
+- intent: question_43
+  examples: |
+    - ka reiskia public
+    - ka reiskia private
+    - kas yra public
+    - kas yra private
+- intent: question_43_usage
+  examples: |
+    - kur naudojamas private
+    - kaip naudojamas private
+    - private pozymio panaudojimas
+    - public pozymio panaudojimas
+- intent: question_43_examples
+  examples: |
+    - pateik private pavyzdi
+    - pateik public pavyzdi
+    - pvz private
+    - pvz public
+    - private pozymio pavyzdys
+    - public pozymio pavyzdys
+- intent: question_43_readmore
+  examples: |
+    - daugiau pasiskaityti apie private pozymi
+    - daugiau pasiskaityti apie public pozymi
+    - placiau apie public pozymi
+    - placiau apie private pozymi
+    - skaidres apie private pozymi
+    - skaidres apie public pozymi
+- intent: question_44
+  examples: |
+    - kas yra metodas
+    - ka resikia metodas
+    - kaip veikia metodai
+- intent: question_44_usage
+  examples: |
+    - kaip naudojamas metodas
+    - kur naudojomas metodas
+    - metodo panaudojimas
+- intent: question_44_examples
+  examples: |
+    - pateik metodo pavyzdi
+    - metodo pavyzdys
+    - duok metodo pavyzdziu
+- intent: question_44_readmore
+  examples: |
+    - daugiau pasiskaityti apie metodus
+    - placiau apie metodus
+    - skaidres apie metodus
+- intent: question_45
+  examples: |
+    - kaip veikia metodas grazinantis atsakymus per varda
+    - kas yra metodas grazininatis atsakymus per varda
+    - metodas grazininatis atsakymus per varda
+- intent: question_45_usage
+  examples: |
+    - kur naudojamas metodas grazinantis atsakyma per varda
+    - kaip naudojamas metodas grazinantis atsakyma per varda
+    - metodo grazinan2io atsakyma per varda panaudojimas
+- intent: question_45_examples
+  examples: |
+    - pateik metodo grazinancio atsakymus per varda pavyzdziu
+    - metodo grazinancio atsakymus per varda pavyzdys
+    - pvz metodo grazinancio atsakymus per varda
+- intent: question_45_readmore
+  examples: |
+    - daugiau pasiskaityti apie metoda grazinanti atsakyma per varda
+    - placiau apie metoda grazinanti atsakyma per varda
+    - skaidre apie metoda grazinanti atsakyma per varda
+- intent: question_46
+  examples: |
+    - kas yra ref
+    - kas yra out
+    - ka reiskia ref
+    - ka reiskia out
+- intent: question_46_usage
+  examples: |
+    - kur naudojamas ref
+    - kur naudojamas out
+    - ref panaudojimas
+    - out panaudojimas
+- intent: question_46_examples
+  examples: |
+    - pateik man ref pavyzdziu
+    - pateik man out pavyzdziu
+    - out pavyzdys
+    - ref pavyzdys
+    - pvz out
+    - pvz ref
+- intent: question_46_readmore
+  examples: |
+    - daugiau pasiskaityti apie ref
+    - daugiau pasiskaityti apie out
+    - placiau apie ref
+    - placiau apie out
+- intent: question_47
+  examples: |
+    - ka reiskia getter
+    - ka reiskia setter
+    - kas yra getter
+    - kas yra setter
+    - kaip veikia setter
+    - kaip veikia getter
+- intent: question_47_usage
+  examples: |
+    - kur naudojamas getter
+    - kur naudojamas setter
+    - getter panaudojimas
+    - setter panaudojimas
+- intent: question_47_examples
+  examples: |
+    - pateik setter pavyzdi
+    - pateik getter pavyzdi
+    - pvz getter
+    - pvz setter
+    - setter pavyzdys
+    - getter pavyzdys
+- intent: question_47_readmore
+  examples: |
+    - daugiau pasiskaityti apie getter
+    - daugiau pasiskaityti apie setter
+    - placiau info apie setter
+    - placiau info apie getter
+- intent: question_48
+  examples: |
+    - kaip veikia for inicializavimo dalis
+    - kas yra for inicializavimo dalis
+    - for ciklo inicializavimo dalis
+- intent: question_48_usage
+  examples: |
+    - kur naudojama for ciklo inicializavimo dalis
+    - kaip naudojama for ciklo inicializavimo dalis
+    - for ciklo inicializavimo dalies panaudojimas
+- intent: question_48_examples
+  examples: |
+    - pateik pavyzdziu apie for ciklo inicializavimo dali
+    - pvz apie for ciklo inicializavimo dali
+    - for ciklo inicializavimo dalies pavyzdys
+- intent: question_48_readmore
+  examples: |
+    - daugiau pasiskaityti apie for ciklo inicializavimo dali
+    - placiau apie for ciklo inicializavimo dali
+- intent: question_49
+  examples: |
+    - kaip veikia for ciklo salygos dalis
+    - kas yra for ciklo salygos dalis
+- intent: question_49_usage
+  examples: |
+    - kur naudojama for ciklo salygos dalis
+    - kaip naudojama for ciklo salygos dalis
+    - for ciklo salygos dalies panaudojimas
+- intent: question_49_examples
+  examples: |
+    - pateik man pavyzdziu apie for ciklo salygos dali
+    - for ciklo salygos dalies pavyzdys
+    - pvz for ciklo salygos dalis
+- intent: question_49_readmore
+  examples: |
+    - daugiau pasiskaityti apie for ciklo salygos dalis
+    - placiau apie for ciklo salygos dalis
+- intent: question_50
+  examples: |
+    - kaip veikia for ciklo iteracijos dalis
+    - kas yra for ciklo iteracijos dalis
+- intent: question_50_usage
+  examples: |
+    - kur naudojama for ciklo iteracijos dalis
+    - kaip naudojama for ciklo iteracijos dalis
+    - for ciklo iteracijos dalies panaudojimas
+- intent: question_50_examples
+  examples: |
+    - pateik for ciklo iteracijos dalies pavyzdi
+    - for ciklo iteracijos dalies pavyzdys
+    - pvz for ciklo iteracijos dalis
+- intent: question_50_readmore
+  examples: |
+    - daugiau pasiskaityti apie for ciklo iteracijos dali
+    - placiau apie for ciklo iteracijos dali
+- intent: question_51
+  examples: |
+    - kaip veikia for ciklas su keliais inicializatoriais
+    - kas yra for ciklas su keliais inicializatoriais
+- intent: question_51_usage
+  examples: |
+    - for ciklo su keliais inicializatoriais panaudojimas
+    - kaip naudojamas for ciklas su keliais inicializatoriais
+    - kur naudojamas for ciklas su keliais inicializatoriais
+- intent: question_51_examples
+  examples: |
+    - pateik for ciklo su keliais inicializatoriais pavyzdi
+    - for ciklo su keliais inicializatoriais pavyzdys
+    - pvz for ciklas su keliais inicializatoriais
+- intent: question_51_readmore
+  examples: |
+    - daugiau pasiskaityti apie for cikla su keliais inicializatoriais
+    - placiau apie for cikla su keliais inicializatoriais
+- intent: question_52
+  examples: |
+    - kaip veikia ciklas su keliais iteracijos veiksmais
+    - kas yra ciklas su keliais iteracijos veiksmais
+- intent: question_52_usage
+  examples: |
+    - kur naudojamas ciklas su keliais iteracijos veiksmais
+    - kaip naudojamas ciklas su keliais iteracijos veiksmais
+    - ciklo su keliais iteracijos veiksmais panaudojimas
+- intent: question_52_examples
+  examples: |
+    - pateik ciklo su keliais iteracijos veiksmais pavyzdi
+    - ciklo su keliais iteracijos veiksmais pavyzdys
+    - pvz ciklas su keliais iteracijos veiksmais
+- intent: question_52_readmore
+  examples: |
+    - daugiau pasiskaityti apie cikla su keliais iteracijos veiksmais
+    - placiau apie cikla su keliais iteracijos veiksmais
+- intent: question_30
+  examples: |
+    - kas yra salygine logine operacija
+    - kaip veikia salygine logine operacija
+- intent: question_30_usage
+  examples: |
+    - kur naudojama salygine logine operacija
+    - salygines logines operacijos naudojimas
+    - panaudojimas salygine logine operacija
+- intent: question_30_examples
+  examples: |
+    - pateik salygines logines operacijos pavyzdi
+    - pvz salygine logine operacija
+    - salygines logines operacijos pavyzdys
+- intent: question_30_readmore
+  examples: |
+    - daugiau pasiskaityti apie salygines logines operacijas
+    - info apie salygine logine operacija
+    - skaidre salygine logine operacija
+- intent: question_37
+  examples: |
+    - kaip veikia do while ciklas
+    - kas yra do...while ciklas
+    - do while ciklo veikimas
+- intent: question_37_usage
+  examples: |
+    - kur naudojamas do while ciklas
+    - kaip naudojamas do...while ciklas
+    - do while panaudojimas
+- intent: question_37_examples
+  examples: |
+    - pateik do...while ciklo pavyzdi
+    - do while pavyzdys
+    - pvz do...while
+- intent: question_37_readmore
+  examples: |
+    - kur daugiau pasiskaityti apie do...while cikla
+    - kur placiau apie do while cikla
+    - skaidres kur butu do while ciklas
+- intent: question_20
+  examples: |
+    - "koks yra operacij\u0173 prioritetas"
+    - "kas yra operacij\u0173 prioritetas"
+    - "kaip veikia operacij\u0173 prioritetas"
+- intent: question_20_usage
+  examples: |
+    - "kur naudojami operacij\u0173 prioritetai"
+    - "kaip naudojami operacij\u0173 prioritetai"
+- intent: question_20_examples
+  examples: |
+    - "pateik operacij\u0173 prioriteto naudojimo pavyzdziu"
+    - "pvz operacij\u0173 prioritetas"
+    - "operacij\u0173 prioritetu pavyzdziai"
+- intent: question_20_readmore
+  examples: |
+    - "daugiau pasiskaityti apie operacij\u0173 prioritetus"
+    - "daugiau info apie operacij\u0173 prioritetus"

@@ -11,9 +11,9 @@ def connectToDB(url, key):
     except:
         print("---- Connection to Supabase database failed. ----")
 
-def writeToYAML_Domain(training_data, filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        existing_domain_data = yaml.safe_load(file)
+def writeToYAML_Domain(training_data, filepath, default_filepath):
+    with open(default_filepath, 'r', encoding='utf-8') as f1:
+        existing_domain_data = yaml.safe_load(f1)
 
     for row in training_data:
         question_name = 'utter_question_' + str(row['id'])
@@ -61,10 +61,21 @@ def writeToYAML_Domain(training_data, filepath):
     
     with open(filepath, 'w', encoding='utf-8') as file:
         yaml.dump(existing_domain_data, file, sort_keys=False)
-
-def writeToYAML_NLU(training_data, filepath):
+    
     with open(filepath, 'r', encoding='utf-8') as file:
-        existing_nlu_data = yaml.safe_load(file)
+        data_to_modify = file.read()
+    
+    data_to_modify = data_to_modify.replace('{', '{{')
+    data_to_modify = data_to_modify.replace('}', '}}')
+
+    with open(filepath, 'w', encoding='utf-8') as file:
+            file.write(data_to_modify)
+    
+
+
+def writeToYAML_NLU(training_data, filepath, default_filepath):
+    with open(default_filepath, 'r', encoding='utf-8') as f1:
+        existing_nlu_data = yaml.safe_load(f1)
 
     for i in range(len(existing_nlu_data['nlu'])):
         string_to_convert_to_array = existing_nlu_data['nlu'][i]['examples']
@@ -108,9 +119,9 @@ def writeToYAML_NLU(training_data, filepath):
     with open(filepath, 'w', encoding='utf-8') as file:
         file.write(data_to_modify)
 
-def writeToYAML_Story(training_data, filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        existing_stories_data = yaml.safe_load(file)
+def writeToYAML_Story(training_data, filepath, default_filepath):
+    with open(default_filepath, 'r', encoding='utf-8') as f1:
+        existing_stories_data = yaml.safe_load(f1)
 
     for row in training_data:
         question_name = 'question_' + str(row['id'])

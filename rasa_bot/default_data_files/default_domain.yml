@@ -10,19 +10,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - not_understand
-  - question_1
-  - question_1_usage
-  - question_1_examples
-  - question_1_readmore
-  - question_2
-  - question_2_usage
-  - question_2_examples
-  - question_2_readmore
   - usage_examples
   - where_is_it_used
+  - read_more
 
 responses:
-# Default question responses -----------------------------------------------------------------------------------
   utter_greet:
   - text: "Labas! Kuo galėčiau padėti?"
   - text: "Labas! Kuo šiandiena galėčiau Tau padėti?"
@@ -59,41 +51,9 @@ responses:
 
   utter_not_understand_what:
   - text: "Gal galėtum tiksliau aprašyt ko nesupranti? Mielai stengsiuosi atsakyti."
-# --------------------------------------------------------------------------------------------------------------
 
-# Kas yra objektinis programavimas? ----------------------------------------------------------------------------
-  utter_question_1_answer:
-  - text: "Tai programavimo paradigma, kuri paremta objekto sąvoka."
-
-  utter_question_1_answer_more:
-  - text: "Pasistengsiu patikslinti. Objektinis programavimas (OP) yra programavimo paradigma, kurioje programos yra struktūrizuojamos kaip objektai, kurie yra duomenų struktūros, kuriantys vieną kitą ir bendraujantys vienas su kitu. Kiekvienas objektas gali turėti savo savybes (duomenis) ir veiksmus (metodus ar funkcijas), kurie gali manipuliuoti šiais duomenimis."
-
-  utter_question_1_provide_example:
-  - text: "Objektinio programavimo panaudojimo pavyzdys:"
-
-  utter_question_1_usage:
-  - text: "Objektinio programavimo panaudojimas:"
-
-  utter_question_1_readmore:
-  - text: "Informacijos apie objektinį programavimą gali rasti T1 3/39 skaidrėje"
-# --------------------------------------------------------------------------------------------------------------
-
-# Kas yra objektas? --------------------------------------------------------------------------------------------
-  utter_question_2_answer:
-  - text: "Objektas – tai darinys, kurį sudaro duomenys (laukai) ir jų apdorojimo funkcijos (metodai)."
-
-  utter_question_2_answer_more:
-  - text: "Bandau patikslinti. Objektas objektiniame programavime yra pagrindinė programavimo struktūra, turinti savybes ir metodus. Jis atspindi realaus pasaulio sąvokas arba abstrakcijas, kurios yra svarbios programos kontekste. Objektas susideda iš duomenų (vadinamų objekto savybėmis arba būsenomis) ir metodų (vadinamų veiksmais arba funkcijomis), kurie gali manipuliuoti šiais duomenimis."
-
-  utter_question_2_provide_example:
-  - text: "Objekto panaudojimo pavyzdys:"
-
-  utter_question_2_usage:
-  - text: "Objekto panaudojimas:"
-
-  utter_question_2_readmore:
-  - text: "Informacijos apie objekto sąvoką gali rasti T1 3/39 skaidrėje"
-# --------------------------------------------------------------------------------------------------------------
+  utter_default_fallback:
+  - text: "Atsiprašau, nesu įsitikinęs ar suprantu Tave, gal gali perfrazuoti savo klausimą?"
 
 slots:
   current_topic:

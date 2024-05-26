@@ -1,50 +1,323 @@
-version: "3.1"
-
+version: '3.1'
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
-
-# Objektinis programavimas -----------------------------------------------------------
-- story: Kas yra objektinis programavimas?
-  steps:
-    - or:
-      - intent: question_1
-      - intent: question_1_usage
-      - intent: question_1_examples
-      - intent: question_1_readmore
-    - action: action_answer_question
-# ------------------------------------------------------------------------------------
-
-# Objektas ---------------------------------------------------------------------------
-- story: Kas yra objektas?
-  steps:
-    - or:
-      - intent: question_2
-      - intent: question_2_usage
-      - intent: question_2_examples
-      - intent: question_2_readmore
-    - action: action_answer_question
-# ------------------------------------------------------------------------------------
-
 - story: Kazko nesuprantu
   steps:
-    - intent: not_understand
-    - action: action_clarify_question
-
+  - intent: not_understand
+  - action: action_clarify_question
 - story: Pateik pavyzdiu
   steps:
-    - intent: usage_examples
-    - action: action_provide_examples
-
+  - intent: usage_examples
+  - action: action_provide_examples
 - story: Kur tai naudojama
   steps:
-    - intent: where_is_it_used
-    - action: action_explain_usage
-
+  - intent: where_is_it_used
+  - action: action_explain_usage
 - story: Kur galima daugiau pasiskaityti
   steps:
-    - intent: read_more
-    - action: action_provide_readmore
+  - intent: read_more
+  - action: action_provide_readmore
+- story: "Apie bazinius duomen\u0173 tipus C# kalboje"
+  steps:
+  - or:
+    - intent: question_16
+    - intent: question_16_usage
+    - intent: question_16_examples
+    - intent: question_16_readmore
+  - action: action_answer_question
+- story: Apie konstantas C# kalboje
+  steps:
+  - or:
+    - intent: question_17
+    - intent: question_17_usage
+    - intent: question_17_examples
+    - intent: question_17_readmore
+  - action: action_answer_question
+- story: "Apie priskyrimo operacij\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_22
+    - intent: question_22_usage
+    - intent: question_22_examples
+    - intent: question_22_readmore
+  - action: action_answer_question
+- story: Apie pagrindines aritmetines operacijas C# kalboje
+  steps:
+  - or:
+    - intent: question_18
+    - intent: question_18_usage
+    - intent: question_18_examples
+    - intent: question_18_readmore
+  - action: action_answer_question
+- story: "Apie sveik\u0173j\u0173 skai\u010Di\u0173 dalybos liekanos (%) operatori\u0173\
+    \ C# kalboje"
+  steps:
+  - or:
+    - intent: question_19
+    - intent: question_19_usage
+    - intent: question_19_examples
+    - intent: question_19_readmore
+  - action: action_answer_question
+- story: "Apie skliaust\u0173 naudojim\u0105 operacij\u0173 prioritetams keisti C#\
+    \ kalboje"
+  steps:
+  - or:
+    - intent: question_21
+    - intent: question_21_usage
+    - intent: question_21_examples
+    - intent: question_21_readmore
+  - action: action_answer_question
+- story: "Apie prefiksinius ir pofiksinius (++) ir ma\u017E\u0117jimo (--) operatorius\
+    \ C# kalboje"
+  steps:
+  - or:
+    - intent: question_23
+    - intent: question_23_usage
+    - intent: question_23_examples
+    - intent: question_23_readmore
+  - action: action_answer_question
+- story: "Apie pagrindinius s\u0105lygos operatorius C# kalboje"
+  steps:
+  - or:
+    - intent: question_25
+    - intent: question_25_usage
+    - intent: question_25_examples
+    - intent: question_25_readmore
+  - action: action_answer_question
+- story: Apie loginius kintamuosius C# kalboje
+  steps:
+  - or:
+    - intent: question_26
+    - intent: question_26_usage
+    - intent: question_26_examples
+    - intent: question_26_readmore
+  - action: action_answer_question
+- story: "Apie while cikl\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_34
+    - intent: question_34_usage
+    - intent: question_34_examples
+    - intent: question_34_readmore
+  - action: action_answer_question
+- story: "Apie foreach cikl\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_36
+    - intent: question_36_usage
+    - intent: question_36_examples
+    - intent: question_36_readmore
+  - action: action_answer_question
+- story: "Apie loginius rei\u0161kinius C# kalboje"
+  steps:
+  - or:
+    - intent: question_24
+    - intent: question_24_usage
+    - intent: question_24_examples
+    - intent: question_24_readmore
+  - action: action_answer_question
+- story: "Apie pagrindinius s\u0105lygos operatorius C# kalboje"
+  steps:
+  - or:
+    - intent: question_27
+    - intent: question_27_usage
+    - intent: question_27_examples
+    - intent: question_27_readmore
+  - action: action_answer_question
+- story: Apie loginius kintamuosius C# kalboje
+  steps:
+  - or:
+    - intent: question_28
+    - intent: question_28_usage
+    - intent: question_28_examples
+    - intent: question_28_readmore
+  - action: action_answer_question
+- story: Apie logines operacijas C# kalboje
+  steps:
+  - or:
+    - intent: question_29
+    - intent: question_29_usage
+    - intent: question_29_examples
+    - intent: question_29_readmore
+  - action: action_answer_question
+- story: "Apie login\u0119 XOR operacij\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_31
+    - intent: question_31_usage
+    - intent: question_31_examples
+    - intent: question_31_readmore
+  - action: action_answer_question
+- story: Apie logines operacijas salygos tikrinimo sakiniuose
+  steps:
+  - or:
+    - intent: question_32
+    - intent: question_32_usage
+    - intent: question_32_examples
+    - intent: question_32_readmore
+  - action: action_answer_question
+- story: "Apie s\u0105lygos tikrinimo sakinius (if) C# kalboje"
+  steps:
+  - or:
+    - intent: question_33
+    - intent: question_33_usage
+    - intent: question_33_examples
+    - intent: question_33_readmore
+  - action: action_answer_question
+- story: "Apie for cikl\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_35
+    - intent: question_35_usage
+    - intent: question_35_examples
+    - intent: question_35_readmore
+  - action: action_answer_question
+- story: "Apie duomen\u0173 \u012Fvest\u012F naudojant Console klas\u0119 C# kalboje"
+  steps:
+  - or:
+    - intent: question_38
+    - intent: question_38_usage
+    - intent: question_38_examples
+    - intent: question_38_readmore
+  - action: action_answer_question
+- story: "Apie daug reik\u0161mi\u0173 \u012Fvedim\u0105 vienoje eilut\u0117je C#\
+    \ kalboje"
+  steps:
+  - or:
+    - intent: question_39
+    - intent: question_39_usage
+    - intent: question_39_examples
+    - intent: question_39_readmore
+  - action: action_answer_question
+- story: "Apie i\u0161vesties formatavim\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_40
+    - intent: question_40_usage
+    - intent: question_40_examples
+    - intent: question_40_readmore
+  - action: action_answer_question
+- story: "Apie klas\u0117s k\u016Brim\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_41
+    - intent: question_41_usage
+    - intent: question_41_examples
+    - intent: question_41_readmore
+  - action: action_answer_question
+- story: "Apie klas\u0117s element\u0173 matomum\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_42
+    - intent: question_42_usage
+    - intent: question_42_examples
+    - intent: question_42_readmore
+  - action: action_answer_question
+- story: "Apie private ir public po\u017Eymius C# kalboje"
+  steps:
+  - or:
+    - intent: question_43
+    - intent: question_43_usage
+    - intent: question_43_examples
+    - intent: question_43_readmore
+  - action: action_answer_question
+- story: Apie metodus C# kalboje
+  steps:
+  - or:
+    - intent: question_44
+    - intent: question_44_usage
+    - intent: question_44_examples
+    - intent: question_44_readmore
+  - action: action_answer_question
+- story: "Apie metodus grazinan\u010Dius atsakymus per vard\u0105"
+  steps:
+  - or:
+    - intent: question_45
+    - intent: question_45_usage
+    - intent: question_45_examples
+    - intent: question_45_readmore
+  - action: action_answer_question
+- story: "Apie metodus gr\u0105\u017Einan\u010Dius atsakym\u0105 per parametr\u0173\
+    \ s\u0105ra\u0161\u0105 C# kalboje"
+  steps:
+  - or:
+    - intent: question_46
+    - intent: question_46_usage
+    - intent: question_46_examples
+    - intent: question_46_readmore
+  - action: action_answer_question
+- story: Apie getter ir setter C# kalboje
+  steps:
+  - or:
+    - intent: question_47
+    - intent: question_47_usage
+    - intent: question_47_examples
+    - intent: question_47_readmore
+  - action: action_answer_question
+- story: "Apie for ciklo inicializavimo dal\u012F C# kalboje"
+  steps:
+  - or:
+    - intent: question_48
+    - intent: question_48_usage
+    - intent: question_48_examples
+    - intent: question_48_readmore
+  - action: action_answer_question
+- story: "Apie for ciklo s\u0105lygos dal\u012F C# kalboje"
+  steps:
+  - or:
+    - intent: question_49
+    - intent: question_49_usage
+    - intent: question_49_examples
+    - intent: question_49_readmore
+  - action: action_answer_question
+- story: "Apie for ciklo iteracijos dal\u012F C# kalboje"
+  steps:
+  - or:
+    - intent: question_50
+    - intent: question_50_usage
+    - intent: question_50_examples
+    - intent: question_50_readmore
+  - action: action_answer_question
+- story: "Apie for cikl\u0105 su keliais inicializatoriais C# kalboje"
+  steps:
+  - or:
+    - intent: question_51
+    - intent: question_51_usage
+    - intent: question_51_examples
+    - intent: question_51_readmore
+  - action: action_answer_question
+- story: "Apie for cikl\u0105 su keliais iteracijos veiksmais C# kalboje"
+  steps:
+  - or:
+    - intent: question_52
+    - intent: question_52_usage
+    - intent: question_52_examples
+    - intent: question_52_readmore
+  - action: action_answer_question
+- story: "Apie s\u0105lygines logines operacijas C# kalboje"
+  steps:
+  - or:
+    - intent: question_30
+    - intent: question_30_usage
+    - intent: question_30_examples
+    - intent: question_30_readmore
+  - action: action_answer_question
+- story: Apie do...while C# kalboje
+  steps:
+  - or:
+    - intent: question_37
+    - intent: question_37_usage
+    - intent: question_37_examples
+    - intent: question_37_readmore
+  - action: action_answer_question
+- story: "Apie operacij\u0173 prioritet\u0105 C#"
+  steps:
+  - or:
+    - intent: question_20
+    - intent: question_20_usage
+    - intent: question_20_examples
+    - intent: question_20_readmore
+  - action: action_answer_question

@@ -1,0 +1,71 @@
+.nlu-subtitle {
+    padding: 10px;
+}
+
+.nlu-add-btn {
+    width: 99.75%;
+    border: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #3e5074;
+    color: azure;
+    height: 30px;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+.nlu-add-btn:hover {
+    background-color: #78859c;
+    cursor: pointer;
+}
+
+.nlu-input {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.nlu-remove-btn {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 31px;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    background-color: rgb(102, 44, 44);
+    color: aliceblue;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+.nlu-remove-btn:hover {
+    background-color: rgb(145, 62, 62);
+    cursor: pointer;
+}
+
+.question-input {
+    height: 30px;
+    width: 99%;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    font-family: monospace;
+    font-size: medium;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.nlu-subwrapper {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}

@@ -1,0 +1,94 @@
+.modal-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: white;
+    width: 50rem;
+    max-height: 60%;
+    overflow-y: auto;
+}
+
+.modal .submit-btn {
+    display: block;
+    margin: auto;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    border: none;
+    background-color: #596374;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #3e5074;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group textarea {
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    max-width: 95%;
+}
+
+.form-group label {
+    margin-bottom: 0.2rem;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: red;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.nlu-textarea {
+    height: 500px;
+}
+
+.nlu-wrapper {
+    border: 1px solid rgb(131, 131, 131);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 93.56%;
+    margin: 10px;
+}
+
+.validation-error {
+    border: 1px solid red;
+    padding: 10px;
+    margin: 10px;
+    width: 93.6%;
+    border-radius: 5px;
+    color: red;
+    background-color: rgb(255, 205, 205);
+}
