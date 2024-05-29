@@ -279,7 +279,7 @@ function loadChatbotUI() {
     const chatbox__header__imageDiv = document.createElement("div");
     chatbox__header__imageDiv.className = 'chatbox__image--header';
     const chatbox__header__imageImg = document.createElement("img");
-    chatbox__header__imageImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.3/frontend/chatbot_ui/static/images/moodle-logo.svg"
+    chatbox__header__imageImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/images/moodle-logo.svg"
     chatbox__header__imageImg.alt = 'image';
     const chatbox__content__headerDiv = document.createElement("div");
     chatbox__content__headerDiv.className = "chatbox__content--header";
@@ -293,13 +293,13 @@ function loadChatbotUI() {
     const chatbox__helpBtn = document.createElement("button");
     chatbox__helpBtn.id = "help__button";
     const chatbox__helpBtn__img = document.createElement("img");
-    chatbox__helpBtn__img.src = "../static/images/help-button.svg";
+    chatbox__helpBtn__img.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/images/help-button.svg";
     chatbox__helpBtn__img.className = "help_button_img";
 
     const chatbox__faqBtn = document.createElement("button");
     chatbox__faqBtn.id = "faq__button";
     const chatbox__faqBtn__img = document.createElement("img");
-    chatbox__faqBtn__img.src = "../static/images/faq-icon.svg";
+    chatbox__faqBtn__img.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/images/faq-icon.svg";
     chatbox__faqBtn__img.className = "faq_button_img";
 
     const chatbox__content__headerP = document.createElement("p");
@@ -317,17 +317,17 @@ function loadChatbotUI() {
     chatbox__footerBtn.id = "send__button";
     chatbox__footerBtn.className = "chatbox__send--footer";
     const chatbox__footerImg = document.createElement("img");
-    chatbox__footerImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.3/frontend/chatbot_ui/static/images/send-button.svg";
+    chatbox__footerImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/images/send-button.svg";
     const chatbox__buttonDiv = document.createElement("div");
     chatbox__buttonDiv.className = 'chatbox__button';
     const chatbox__buttonBtn = document.createElement("button");
     const chatbox__buttonImg = document.createElement("img");
-    chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.3/frontend/chatbot_ui/static/images/chatbox-icon.svg";
+    chatbox__buttonImg.src = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/images/chatbox-icon.svg";
 
     const cssSheet = document.createElement("link");
     cssSheet.rel = "stylesheet";
     cssSheet.type = "text/css";
-    cssSheet.href = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.3/frontend/chatbot_ui/static/css/main.css"
+    cssSheet.href = "https://cdn.jsdelivr.net/gh/deepFriedGarnish/moodle_chatbot@1.0.4/frontend/chatbot_ui/static/css/main.css";
     // cssSheet.href = "../static/css/main.css"
 
     head.append(cssSheet);
