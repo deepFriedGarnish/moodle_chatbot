@@ -3,6 +3,8 @@ import './pages.css';
 import trashIcon from '../svg/trash-icon.svg';
 import editIcon from '../svg/edit-icon.svg';
 import { TrainingModal } from '../components/TrainingModal';
+import { DeleteModal } from '../components/DeleteModal';
+import { SuccessModal } from '../components/SuccessModal';
 
 const BotTraining = () => {
     const [data, setData] = useState([]);
@@ -10,6 +12,14 @@ const BotTraining = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [modalOpen, setModalOpen] = useState(false);
     const [rowToEdit, setRowToEdit] = useState(null);
+    const [deleteModalOpen, setDeleteModalOpen] = React.useState(false);
+    const [rowToDelete, setRowToDelete] = React.useState(false);
+    const [successModalOpen, setSuccessModalOpen] = React.useState(false);
+
+    const handleDelete = (id) => {
+        setRowToDelete(id);
+        setDeleteModalOpen(true);
+    }
 
     // Fetch the data
     React.useEffect(() => {
@@ -37,6 +47,7 @@ const BotTraining = () => {
                     'Content-Type': 'application/json'
                 }
             });
+            setSuccessModalOpen(true);
         } catch (error) {
             console.error(error);
         }
@@ -67,6 +78,7 @@ const BotTraining = () => {
             console.error(error);
             setIsLoading(false);
         }
+        setDeleteModalOpen(false);
     }
 
     const getRowById = () => {
@@ -206,7 +218,7 @@ const BotTraining = () => {
                                 <td>{item.story_name}</td>
                                 <td>{JSON.stringify(item.nlu_examples)}</td>
                                 <td className='action-cell'>
-                                    <button className='action-button' onClick={() => handleDeleteRow(item.id)}>
+                                    <button className='action-button' onClick={() => handleDelete(item.id)}>
                                         <img className='icon' src={trashIcon}/>
                                     </button>
                                 </td>
@@ -238,6 +250,20 @@ const BotTraining = () => {
                     closeModal={() => setModalOpen(false)}
                     defaultValue={getRowById(rowToEdit)}
                     onSubmit={handleSubmit}/>
+            }
+            {
+            deleteModalOpen && 
+                <DeleteModal 
+                    closeModal={() => setDeleteModalOpen(false)}
+                    handleDelete={() => handleDeleteRow(rowToDelete)}
+                    handleCancel={() => setDeleteModalOpen(false)}
+                    title={`Ar tikrai norite ištrinti apmokymo įrašą nr. ${rowToDelete}?`}/>
+            }
+            {
+            successModalOpen && 
+                <SuccessModal 
+                    closeModal={() => setSuccessModalOpen(false)}
+                    title={'Apmokymo failai sėkmingai sugeneruoti.'}/>
             }
         </div>
     )

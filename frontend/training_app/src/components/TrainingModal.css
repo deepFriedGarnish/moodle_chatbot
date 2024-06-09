@@ -11,6 +11,12 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.title {
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: large;
+}
+
 .modal {
     border-radius: 15px;
     padding: 2rem;
@@ -51,6 +57,7 @@
     padding: 0.3rem;
     font-size: 1rem;
     max-width: 95%;
+    height: 100px;
 }
 
 .form-group label {

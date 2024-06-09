@@ -29,7 +29,7 @@ body {
     display: flex;
     margin-bottom: 20px;
     flex-direction: column;
-    background: #eee;
+    background: #ffffff;
     width: 300px;
     height: 350px;
     z-index: -123456;
@@ -93,7 +93,7 @@ body {
 .chatbox__messages {
     margin-top: auto;
     display: flex;
-    overflow-y: scroll;
+    overflow-x: hidden;
     flex-direction: column-reverse;
 }
 
@@ -111,6 +111,8 @@ body {
     margin-right: auto;
     opacity: 100%;
     transition: all .2s ease-in-out;
+    /* height:auto; */
+    overflow-wrap: break-word;
 }
 
 .chatbox__footer {
@@ -119,7 +121,7 @@ body {
 }
 
 .chatbox__support {
-    background: #F9F9F9;
+    background: #ffffff;
     height: 450px;
     width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -297,9 +299,12 @@ body {
 }
 
 .pre {
-    background: #f4f4f4;
+    background: #ffffff;
     border: 1px solid #ddd;
     border-left: 3px solid #2F415F;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
@@ -307,8 +312,9 @@ body {
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
-    overflow: auto;
+    /* white-space: pre-wrap; */
     padding: 1em 1.5em;
     display: block;
-    word-wrap: break-word;
+    overflow-wrap: normal;
+    height: fit-content;
 }

@@ -114,18 +114,18 @@ def updateConversation():
 
 @app.get("/getConversations")
 def getConversations():
-    response = supabase.table(CONVERSATION_TABLE).select('*').execute();
+    response = supabase.table(CONVERSATION_TABLE).select('*').order('id', desc=True).execute();
     
     return jsonify(response.data)
 
 @app.get("/getUnansweredQuestions")
 def getUnansweredQuestions():
-    response = supabase.table(UNANSWERED_PROMPT_TABLE).select('*').execute();
+    response = supabase.table(UNANSWERED_PROMPT_TABLE).select('*').order('id', desc=True).execute();
     return jsonify(response.data)
 
 @app.get("/getTrainingData")
 def getTrainingData():
-    response = supabase.table(TRAINING_DATA_TABLE).select('*').execute();
+    response = supabase.table(TRAINING_DATA_TABLE).select('*').order('id', desc=True).execute();
     return jsonify(response.data)
 
 @app.post("/updateTrainingDataRow")
@@ -157,10 +157,7 @@ def deleteTrainingDataRow():
 def deleteUnansweredQuestionRow():
     row_id = request.get_json()
 
-    response = supabase.table(UNANSWERED_PROMPT_TABLE).select('*').eq('id', row_id).execute()
-    conversationId = response.data[0]['conversationId']
     supabase.table(UNANSWERED_PROMPT_TABLE).delete().eq('id', row_id).execute()
-    supabase.table(CONVERSATION_TABLE).delete().eq('id', conversationId).execute()
 
     return []
 
@@ -240,6 +237,11 @@ def getFAQ():
             final_result.append(result_item)
 
     return jsonify(final_result)
+
+@app.delete("/deleteFAQ")
+def deleteFAQ():
+    supabase.table(FAQ_TABLE).delete().neq('id', 0).execute()
+    return []
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

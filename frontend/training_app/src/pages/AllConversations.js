@@ -3,6 +3,7 @@ import './pages.css';
 import trashIcon from '../svg/trash-icon.svg';
 import inspectIcon from '../svg/inspect-icon.svg';
 import { ConversationModal } from '../components/ConversationModal';
+import { DeleteModal } from '../components/DeleteModal';
 
 const AllConversations = () => {
     // Data state
@@ -11,10 +12,17 @@ const AllConversations = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [modalOpen, setModalOpen] = useState(false);
     const [rowToOpen, setRowToOpen] = useState(null);
+    const [deleteModalOpen, setDeleteModalOpen] = React.useState(false);
+    const [rowToDelete, setRowToDelete] = React.useState(false);
 
     const handleOpenRow = (idx) => {
         setRowToOpen(idx);
         setModalOpen(true);
+    }
+
+    const handleDelete = (id) => {
+        setRowToDelete(id);
+        setDeleteModalOpen(true);
     }
 
     const getRowById = () => {
@@ -65,6 +73,7 @@ const AllConversations = () => {
             console.error(error);
             setIsLoading(false);
         }
+        setDeleteModalOpen(false);
     }
 
     return (
@@ -90,7 +99,7 @@ const AllConversations = () => {
                                 <td>{item.id}</td>
                                 <td>{item.conversation_text}</td>
                                 <td className='action-cell'>
-                                    <button className='action-button' onClick={() => handleDeleteRow(item.id)}>
+                                    <button className='action-button' onClick={() => handleDelete(item.id)}>
                                         <img className='icon' src={trashIcon}/>
                                     </button>
                                 </td>
@@ -109,6 +118,14 @@ const AllConversations = () => {
                 <ConversationModal 
                     closeModal={() => setModalOpen(false)}
                     data={getRowById(rowToOpen)}/>
+            }
+            {
+            deleteModalOpen && 
+                <DeleteModal 
+                    closeModal={() => setDeleteModalOpen(false)}
+                    handleDelete={() => handleDeleteRow(rowToDelete)}
+                    handleCancel={() => setDeleteModalOpen(false)}
+                    title={`Visi su šiuo pokalbiu susiję neatsakyti klausimai bus taip pat ištrinti. Ar tikrai norite ištrinti pokalbį nr. ${rowToDelete}?`}/>
             }
         </div>
     )

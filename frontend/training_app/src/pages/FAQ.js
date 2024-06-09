@@ -1,11 +1,13 @@
 import React from 'react';
 import './pages.css';
+import { DeleteModal } from '../components/DeleteModal';
 
 const FAQ = () => {
     // Data state
     const [jsonData, setJsonData] = React.useState([]);
     const [isVisible, setIsVisible] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
+    const [deleteModalOpen, setDeleteModalOpen] = React.useState(false);
 
     // Fetch the data
     React.useEffect(() => {
@@ -19,6 +21,37 @@ const FAQ = () => {
         setIsLoading(false);
         setIsVisible(true);
     }, []);
+
+    const handleDelete =  () => {
+        setDeleteModalOpen(true);
+    }
+
+    const handleDeleteFAQ = async () => {
+        setIsLoading(true);
+        // Call API to update the table row
+        try {
+            await fetch('http://localhost:5000/deleteFAQ', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+        } catch (error) {
+            console.error(error);
+        }
+
+        // Call API to fetch new data
+        try {
+            const response = await fetch('http://localhost:5000/getFAQ');
+            const result = await response.json();
+            setJsonData(result);
+            setIsLoading(false);
+        } catch (error) {
+            console.error(error);
+            setIsLoading(false);
+        }
+        setDeleteModalOpen(false);
+    }
 
     return (
         isLoading ? (
@@ -49,11 +82,19 @@ const FAQ = () => {
                 <tfoot>
                 <tr>
                     <td colSpan={10} className='btn-wrapper'>
-                        <button className='footer-btn'>Išvalyti</button>
+                        <button className='footer-btn' onClick={() => handleDelete()}>Išvalyti</button>
                     </td>
                 </tr>
             </tfoot>
             </table>
+            {
+            deleteModalOpen && 
+                <DeleteModal 
+                    closeModal={() => setDeleteModalOpen(false)}
+                    handleDelete={() => handleDeleteFAQ()}
+                    handleCancel={() => setDeleteModalOpen(false)}
+                    title={'Ar tikrai norite ištrinti D.U.K.?'}/>
+            }
         </div>
     )
 );

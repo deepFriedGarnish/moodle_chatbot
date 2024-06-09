@@ -1,0 +1,33 @@
+.modal-delete {
+    border-radius: 15px;
+    padding: 2rem;
+    width: 15rem;
+    max-height: 80%;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: aliceblue;
+}
+
+.title-delete {
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.modal-container-delete {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.delete-modal-choices {
+    display: flex;
+    flex-direction: column;
+}
